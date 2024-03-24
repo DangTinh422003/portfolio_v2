@@ -2,8 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
+
 @layer components {
   .flex-center {
     @apply flex items-center justify-center;
+  }
+  .transition-fade {
+    @apply transition-all duration-[400ms];
   }
 }
