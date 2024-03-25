@@ -11,6 +11,7 @@ const config: Config = {
         yellow: "#ffb400",
         gray: "#2b2a2a",
         black: "#111111",
+        green: "#00ff7f",
       },
     },
   },

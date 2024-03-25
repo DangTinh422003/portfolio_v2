@@ -20,11 +20,13 @@
 }
 
 :root {
-  /* --background: white;
-  --foreground: #111111; */
+  --background: white;
+  --foreground: #111111;
+  --primary: #00ff7f;
 }
 
 [data-theme="dark"] {
-  /* --background: black;
-  --foreground: white; */
+  --background: black;
+  --foreground: white;
+  --primary: #ffb400;
 }

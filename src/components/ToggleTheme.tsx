@@ -19,12 +19,12 @@ const ToggleTheme = () => {
   };
 
   return (
-    <div
-      className="w-[50px] h-[50px] bg-yellow rounded-full fixed z-50 top-[50px] right-[50px] flex-center text-white text-xl cursor-pointer"
+    <button
+      className="w-[50px] h-[50px] bg-[var(--primary)] rounded-full border-0 outline-none fixed z-50 top-[20px] right-[20px] flex-center text-white text-xl cursor-pointer shadow md:top-[50px] md:right-[50px]"
       onClick={handleToggleTheme}
     >
       {isDarkTheme ? <IoMoon /> : <FaSun />}
-    </div>
+    </button>
   );
 };
 

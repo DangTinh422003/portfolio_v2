@@ -37,18 +37,18 @@ const Sidebar = () => {
   const pathName = usePathname();
 
   return (
-    <ul className="fixed flex flex-col gap-5 z-50 right-[30px] top-1/2 -translate-y-1/2">
+    <ul className="fixed flex py-3 px-4 justify-center gap-10 bottom-0 left-0 w-full z-50 bg-gray lg:bg-transparent lg:bottom-auto lg:left-auto lg:right-[30px] lg:top-1/2 lg:-translate-y-1/2 lg:flex-col lg:w-auto lg:justify-start lg:py-auto lg:px-auto lg:gap-5">
       {SIDEBARS.map((sidebar) => (
         <li className="cursor-pointer relative z-10 group" key={sidebar.title}>
           <Link href={sidebar.href}>
             <div
-              className={`w-[50px] h-[50px] bg-gray ${
-                pathName === sidebar.href && "bg-yellow"
-              } text-white flex-center rounded-full text-xl relative z-10 group-hover:bg-yellow transition-fade shadow-xl`}
+              className={`w-[50px] h-[50px]  ${
+                pathName === sidebar.href ? "bg-[var(--primary)]" : "bg-gray"
+              } text-white flex-center rounded-full text-xl relative z-10 group-hover:bg-[var(--primary)] transition-fade shadow-xl`}
             >
               <sidebar.icon></sidebar.icon>
             </div>
-            <p className="uppercase absolute right-0 top-0 flex-center bg-yellow rounded-full h-full z-0 font-semibold opacity-0 invisible pr-8 pl-4 group-hover:pr-16 group-hover:pl-6 group-hover:opacity-100 group-hover:visible transition-fade duration-[400ms]">
+            <p className="uppercase hidden absolute right-0 top-0 text-white flex-center bg-[var(--primary)] rounded-full h-full z-0 font-semibold opacity-0 invisible pr-8 pl-4 group-hover:pr-16 group-hover:pl-6 group-hover:opacity-100 group-hover:visible transition-fade duration-[400ms] lg:flex">
               {sidebar.title}
             </p>
           </Link>
