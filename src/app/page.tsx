@@ -1,15 +1,10 @@
-"use client";
 import ContentWrapper from "@/components/ContentWrapper";
 import LinkButton from "@/components/LinkButton";
 import Image from "next/image";
-import React, { useLayoutEffect } from "react";
+import React from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 
-export default function Home() {
-  useLayoutEffect(() => {
-    document.documentElement.classList.add("dark");
-  }, []);
-
+export default async function Home() {
   return (
     <main className="min-h-screen w-screen flex relative z-10 overflow-hidden max-w-[100vw] xl:max-h-[100vh]">
       <div className="hidden absolute z-0 top-0 left-0 bg-yellow w-[100vw] h-[200vh] -rotate-[16deg] -translate-x-[78%] xl:block"></div>

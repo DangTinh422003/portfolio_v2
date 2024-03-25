@@ -15,6 +15,16 @@
     @apply flex items-center justify-center;
   }
   .transition-fade {
-    @apply transition-all duration-[400ms] ease-in-out;
+    @apply transition-all duration-300 ease-in-out;
   }
+}
+
+:root {
+  /* --background: white;
+  --foreground: #111111; */
+}
+
+[data-theme="dark"] {
+  /* --background: black;
+  --foreground: white; */
 }

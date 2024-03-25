@@ -5,12 +5,11 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  darkMode: "class",
   theme: {
     extend: {
       colors: {
         yellow: "#ffb400",
-        gray: "#838383",
+        gray: "#2b2a2a",
         black: "#111111",
       },
     },

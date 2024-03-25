@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import Sidebar from "@/components/Sidebar";
 
 import "@/common/styles/reset.css";
 import "@/common/styles/globals.css";
+import { ThemeProvider } from "next-themes";
+import ToggleTheme from "@/components/ToggleTheme";
+import NextThemeProvider from "@/common/providers/NextThemeProvider";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -20,11 +24,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${poppins.className} w-screen h-screen dark:bg-black dark:text-white`}
-      >
-        {children}
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${poppins.className} w-screen h-scree`}>
+        <NextThemeProvider>
+          <Sidebar />
+          <ToggleTheme />
+          {children}
+        </NextThemeProvider>
       </body>
     </html>
   );

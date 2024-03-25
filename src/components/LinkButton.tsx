@@ -11,11 +11,11 @@ const LinkButton = ({ href, title, icon: Icon }: LinkButtonProps) => {
   return (
     <div className="inline-block">
       <Link href={href}>
-        <div className="group hover:bg-yellow outline outline-[2px] outline-yellow h-[50px] relative rounded-full transition-fade">
-          <div className="absolute h-[50px] w-[50px] bg-yellow flex-center rounded-full top-0 left-0 group-hover:left-[calc(100%-50px)] transition-fade">
+        <div className="group h-[50px] rounded-full relative transition-fade">
+          <div className="absolute h-[52px] w-[52px] bg-yellow flex-center rounded-full -top-[1px] -left-[1px] group-hover:left-[calc(100%-50px)] transition-fade">
             <Icon className="text-white text-xl" />
           </div>
-          <p className="h-full rounded-full shadow-2xl flex-center pl-16 pr-6 group-hover:text-white group-hover:pl-6 group-hover:pr-16 transition-fade uppercase font-bold text-lg">
+          <p className="h-full rounded-full shadow-2xl flex-center pl-16 pr-6 group-hover:bg-yellow group-hover:text-white group-hover:pl-6 group-hover:pr-16 transition-fade uppercase font-semibold text-lg outline outline-[2px] outline-yellow">
             {title}
           </p>
         </div>
