@@ -1,57 +1,68 @@
 "use client";
+import ContentWrapper from "@/components/ContentWrapper";
 import LinkButton from "@/components/LinkButton";
 import Image from "next/image";
-import React, { useEffect } from "react";
+import React, { useLayoutEffect } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 export default function Home() {
-  useEffect(() => {
+  useLayoutEffect(() => {
     document.documentElement.classList.add("dark");
   }, []);
 
   return (
-    <main className="h-screen max-h-[100vh] w-screen max-w-[100vw] flex relative overflow-hidden z-10">
-      <div className="hidden xl:block absolute z-0 top-0 left-0 bg-yellow w-[100vw] h-[200vh] -rotate-[16deg] -translate-x-[78%]"></div>
-      <div className="container mx-auto flex gap-32">
-        <div className="w-4/12 flex-center relative">
-          <div className="w-full h-[75vh] relative rounded-lg overflow-hidden">
+    <main className="min-h-screen w-screen flex relative z-10 overflow-hidden max-w-[100vw] xl:max-h-[100vh]">
+      <div className="hidden absolute z-0 top-0 left-0 bg-yellow w-[100vw] h-[200vh] -rotate-[16deg] -translate-x-[78%] xl:block"></div>
+      <ContentWrapper className="lg:0 xl:flex xl:gap-16 2xl:gap-24">
+        <div className="flex-center relative mt-10 md:mt-16 lg:w-full xl:w-4/12 xl:mt-0">
+          <div className="relative shadow-2xl rounded-full overflow-hidden border-[2px] border-solid border-yellow w-[30vh] h-[30vh] md:w-[35vh] md:h-[35vh] xl:border-0 xl:w-full xl:h-[75vh] xl:rounded-3xl ">
             <Image
               src="/portfolio_img.png"
               alt=""
+              sizes="auto"
               fill={true}
               placeholder="blur"
               blurDataURL="/portfolio_img.png"
             />
           </div>
         </div>
-        <div className="w-8/12 flex-center">
+        <div className="flex-center lg:w-full xl:w-8/12">
           <div>
-            <h1 className="ml-10 text-6xl font-bold relative leading-[1.05]">
-              <span className="text-yellow before:content-[''] before:w-11 before:h-2 before:absolute before:-left-16 before:top-7 before:rounded-lg before:bg-yellow">
+            <h1 className="font-bold relative leading-[1.05] text-center text-3xl mt-8 md:mt-10 md:text-5xl xl:text-left xl:text-6xl xl:ml-10 xl:mt-0">
+              <span className="text-yellow before:content-[''] before:w-11 before:h-2 before:absolute before:-left-16 before:top-7 before:rounded-lg before:bg-yellow before:hidden before:xl:block">
                 I&apos;m Cao Dang Tinh
               </span>
               <br /> Web Developer !
             </h1>
-            <p className="leading-[1.8] text-xl text-justify mt-4 font-light">
-              Hi! My name is Tinh, and I am a second-year student at Ton Duc
-              Thang University. During the summer of my first year in 2021, I
-              stumbled upon the F8 Fullstack community founded by Mr. Son, where
-              I completed courses on HTML, CSS, and ReactJS, and worked on some
-              personal projects. Despite facing many challenges, I am truly
-              grateful to Mr. Son and the community for their support and
-              encouragement, which kept me from giving up.
+            <p className="mt-8 font-normal text-md text-center lg:px-10 lg:text-justify xl:px-0 xl:text-lg xl:leading-[2]">
+              Hi, I am currently a third-year student majoring in Computer
+              Science at Ton Duc Thang University. After a period of studying at
+              the university and working on personal projects, I have gained
+              knowledge in Html, Css, Javascript, TypeScript, NextJS, NodeJs,
+              and more. Currently, I am seeking an internship position in Web
+              development to further develop my skills. In the future, I plan to
+              leverage my abilities to contribute to the growth of the company
+              if I am selected to join your team.
             </p>
-            <div className="flex gap-7 mt-8">
-              <LinkButton
-                icon={FaArrowRightLong}
-                title="portfolio"
-                href="/portfolio"
-              />
-              <LinkButton icon={FaArrowRightLong} title="about" href="/about" />
+            <div className="flex-center mt-4 gap-4 flex-col justify-center pb-4 md:flex-row md:gap-7 md:mt-8 xl:justify-start">
+              <div>
+                <LinkButton
+                  icon={FaArrowRightLong}
+                  title="portfolio"
+                  href="/portfolio"
+                />
+              </div>
+              <div>
+                <LinkButton
+                  icon={FaArrowRightLong}
+                  title="about"
+                  href="/about"
+                />
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </ContentWrapper>
     </main>
   );
 }

@@ -15,6 +15,6 @@
     @apply flex items-center justify-center;
   }
   .transition-fade {
-    @apply transition-all duration-[400ms];
+    @apply transition-all duration-[400ms] ease-in-out;
   }
 }
