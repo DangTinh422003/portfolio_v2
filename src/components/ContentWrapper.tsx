@@ -11,7 +11,7 @@ const ContentWrapper = ({
 }: ContentWrapperProps) => {
   return (
     <div
-      className={`${className} container mx-auto md:px-10 xl:px-0 px-4`}
+      className={`${className} container mx-auto px-4 md:px-10 xl:px-10 2xl:px-0`}
       {...rest}
     >
       {children}
