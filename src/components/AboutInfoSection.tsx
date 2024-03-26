@@ -62,17 +62,17 @@ const AboutInfoSection = () => {
       <div className="grid grid-cols-2 gap-x-5 gap-y-5 items-center justify-center">
         <div className="grid-col-1 cursor-pointer hover:scale-[1.03] transition-fade w-full h-full border-[#424242] border border-solid rounded-lg p-9 shadow-xl">
           <p className="text-6xl font-bold text-[var(--primary)]">
-            1<span className="text-5xl ml-1 relative -top-5">+</span>
+            2<span className="text-5xl ml-1 relative -top-5">+</span>
           </p>
-          <p className="text-2xl mt-5 ml-12 uppercase font-normal relative before:content-[''] before:h-1 before:w-8 before:bg-[#424242] before:absolute-center before:-left-8 before:rounded-full">
+          <p className="text-xl mt-5 ml-12 uppercase font-normal relative before:content-[''] before:h-1 before:w-8 before:bg-[#424242] before:absolute-center before:-left-10 before:rounded-full">
             YEARS OF <br /> EXPERIENCE
           </p>
         </div>
         <div className="grid-col-1 cursor-pointer hover:scale-[1.03] transition-fade w-full h-full border-[#424242] border border-solid rounded-lg p-9 shadow-xl">
           <p className="text-6xl font-bold text-[var(--primary)]">
-            1<span className="text-5xl ml-1 relative -top-5">+</span>
+            13<span className="text-5xl ml-1 relative -top-5">+</span>
           </p>
-          <p className="text-2xl mt-5 ml-12 uppercase font-normal relative before:content-[''] before:h-1 before:w-8 before:bg-[#424242] before:absolute-center before:-left-8 before:rounded-full">
+          <p className="text-xl mt-5 ml-12 uppercase font-normal relative before:content-[''] before:h-1 before:w-8 before:bg-[#424242] before:absolute-center before:-left-10 before:rounded-full">
             COMPLETED <br /> PROJECTS
           </p>
         </div>
@@ -80,7 +80,7 @@ const AboutInfoSection = () => {
           <p className="text-6xl font-bold text-[var(--primary)]">
             1<span className="text-5xl ml-1 relative -top-5">+</span>
           </p>
-          <p className="text-2xl mt-5 ml-12 uppercase font-normal relative before:content-[''] before:h-1 before:w-8 before:bg-[#424242] before:absolute-center before:-left-8 before:rounded-full">
+          <p className="text-xl mt-5 ml-12 uppercase font-normal relative before:content-[''] before:h-1 before:w-8 before:bg-[#424242] before:absolute-center before:-left-10 before:rounded-full">
             CERTIFICATES
           </p>
         </div>
@@ -88,7 +88,7 @@ const AboutInfoSection = () => {
           <p className="text-6xl font-bold text-[var(--primary)]">
             1<span className="text-5xl ml-1 relative -top-5">+</span>
           </p>
-          <p className="text-2xl mt-5 ml-12 uppercase font-normal relative before:content-[''] before:h-1 before:w-8 before:bg-[#424242] before:absolute-center before:-left-8 before:rounded-full">
+          <p className="text-xl mt-5 ml-12 uppercase font-normal relative before:content-[''] before:h-1 before:w-8 before:bg-[#424242] before:absolute-center before:-left-10 before:rounded-full">
             AWARD <br /> WON
           </p>
         </div>

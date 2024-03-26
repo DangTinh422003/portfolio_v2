@@ -22,7 +22,7 @@ export default function Home() {
         </div>
         <div className="flex-center lg:w-full xl:w-8/12">
           <div>
-            <h1 className="font-bold relative leading-[1.05] text-center text-3xl mt-8 md:mt-10 md:text-5xl xl:text-left xl:text-5xl 2xl:text-6xl xl:ml-10 xl:mt-0">
+            <h1 className="font-bold relative leading-[1.05] text-center text-3xl mt-8 md:mt-10 md:text-5xl xl:text-left xl:text-5xl 2xl:text-6xl 2xl:leading-[1.2] xl:ml-10 xl:mt-0">
               <span className="text-[var(--primary)] before:content-[''] before:w-11 before:h-2 before:absolute before:-left-16 before:top-7 before:rounded-lg before:bg-[var(--primary)] before:hidden before:xl:block">
                 I&apos;m Cao Dang Tinh
               </span>

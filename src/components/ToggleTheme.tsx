@@ -14,7 +14,7 @@ const ToggleTheme = () => {
 
   return (
     <button
-      className="w-[50px] h-[50px] bg-[var(--primary)] rounded-full border-0 outline-none fixed z-50 top-[20px] right-[20px] flex-center text-white text-xl cursor-pointer shadow md:top-[30px] md:right-[30px]"
+      className="w-[50px] h-[50px] bg-[var(--primary)] rounded-full border-0 outline-none fixed z-50 top-[20px] right-[20px] flex-center text-white text-xl cursor-pointer shadow-xl md:top-[30px] md:right-[30px]"
       onClick={() => setIsDarkTheme(!isDarkTheme)}
     >
       {isDarkTheme ? <IoMoon /> : <FaSun />}
