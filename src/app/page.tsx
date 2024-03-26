@@ -32,8 +32,8 @@ export default function Home() {
               Hi, I am currently a third-year student majoring in Computer
               Science at Ton Duc Thang University. After a period of studying at
               the university and working on personal projects, I have gained
-              knowledge in Html, Css, Javascript, TypeScript, NextJS, NodeJs,
-              and more. Currently, I am seeking an internship position in Web
+              knowledge in Html, Css, Javascript, TypeScript, NextJS, ExpressJS,
+              and more... Currently, I am seeking an fresher position in Web
               development to further develop my skills. In the future, I plan to
               leverage my abilities to contribute to the growth of the company
               if I am selected to join your team.
