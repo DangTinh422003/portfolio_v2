@@ -1,3 +1,5 @@
+import { FC } from "react";
+
 export const SKILLS: {
   name: string;
   image: string;
@@ -61,5 +63,43 @@ export const SKILLS: {
   {
     name: "redux",
     image: "/icons/redux.png",
+  },
+];
+
+export const EXPERIENDS: {
+  timeLine: string;
+  title: string;
+  subTitle: string;
+  icon?: FC<any>;
+}[] = [
+  {
+    timeLine: "2019 - 2021",
+    title: "HOA HOI",
+    subTitle: "HIGH SCHOOL",
+  },
+  {
+    timeLine: "Feb 2021",
+    title: "TON DUC THANG",
+    subTitle: "UNIVERSITY",
+  },
+  {
+    timeLine: "Nov 2021",
+    title: "MENTOR",
+    subTitle: "ICON CLUB",
+  },
+  {
+    timeLine: "Aug 2022",
+    title: "WEB TECHNICAL",
+    subTitle: "CODEMELY",
+  },
+  {
+    timeLine: "Sep 2023",
+    title: "INTERNSHIP",
+    subTitle: "Alta Software",
+  },
+  {
+    timeLine: "Feb 2024",
+    title: "WEB DEVELOPER",
+    subTitle: "The Binary Holdings",
   },
 ];
