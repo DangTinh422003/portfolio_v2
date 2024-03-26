@@ -1,6 +1,5 @@
 import { EXPERIENDS } from "@/common/constants/constants";
 import React from "react";
-import { FaBookOpen } from "react-icons/fa6";
 
 const Experiens = () => {
   return (
@@ -14,8 +13,8 @@ const Experiens = () => {
         {EXPERIENDS.map((exp) => (
           <li key={exp.title} className="flex gap-7">
             <div className="relative before:absolute-center before:h-full before:w-[1px] before:bg-[#424242] z-0">
-              <div className="h-10 w-10 bg-[var(--primary)] rounded-full flex-center text-xl relative z-10">
-                <FaBookOpen />
+              <div className="h-10 w-10 bg-[var(--primary)] text-white rounded-full flex-center text-xl relative z-10">
+                <exp.icon />
               </div>
             </div>
             <div>
