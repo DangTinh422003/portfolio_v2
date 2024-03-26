@@ -28,7 +28,7 @@ export default function Home() {
               </span>
               <br /> Web Developer !
             </h1>
-            <p className="mt-8 font-normal text-md text-center lg:px-10 lg:text-justify xl:pl-0 xl:pr-20 2xl:px-0 xl:text-base 2xl:text-lg leading-[1.8] xl:leading-[2]">
+            <p className="mt-8 font-normal text-md text-center lg:px-10 lg:text-justify xl:pl-0 xl:pr-20 2xl:px-0 xl:text-base 2xl:text-lg leading-[1.8] xl:leading-[2] 2xl:leading-[2]">
               Hi, I am currently a third-year student majoring in Computer
               Science at Ton Duc Thang University. After a period of studying at
               the university and working on personal projects, I have gained

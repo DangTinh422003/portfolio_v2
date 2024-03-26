@@ -4,7 +4,6 @@ import Sidebar from "@/components/Sidebar";
 
 import "@/common/styles/reset.css";
 import "@/common/styles/globals.css";
-import { ThemeProvider } from "next-themes";
 import ToggleTheme from "@/components/ToggleTheme";
 import NextThemeProvider from "@/common/providers/NextThemeProvider";
 
@@ -29,7 +28,7 @@ export default function RootLayout({
         <NextThemeProvider>
           <Sidebar />
           <ToggleTheme />
-          {children}
+          <main className="h-screen w-screen">{children}</main>
         </NextThemeProvider>
       </body>
     </html>

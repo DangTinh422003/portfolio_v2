@@ -37,7 +37,7 @@ const Sidebar = () => {
   const pathName = usePathname();
 
   return (
-    <ul className="fixed flex py-3 px-4 justify-center gap-10 bottom-0 left-0 w-full z-50 bg-gray lg:bg-transparent lg:bottom-auto lg:left-auto lg:right-[30px] lg:top-1/2 lg:-translate-y-1/2 lg:flex-col lg:w-auto lg:justify-start lg:py-auto lg:px-auto lg:gap-5">
+    <ul className="fixed flex py-3 px-4 justify-center gap-10 bottom-0 left-0 w-full z-50 bg-gray lg:bg-transparent lg:bottom-auto lg:left-auto lg:right-[30px] lg:p-0 lg:top-1/2 lg:-translate-y-1/2 lg:flex-col lg:w-auto lg:justify-start lg:py-auto lg:px-auto lg:gap-5">
       {SIDEBARS.map((sidebar) => (
         <li className="cursor-pointer relative z-10 group" key={sidebar.title}>
           <Link href={sidebar.href}>

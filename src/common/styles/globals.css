@@ -7,6 +7,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none;
   }
 }
 
@@ -17,16 +18,21 @@
   .transition-fade {
     @apply transition-all duration-300 ease-in-out;
   }
+  .absolute-center {
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+  }
 }
 
 :root {
   --background: white;
   --foreground: #111111;
   --primary: #00ff7f;
+  --input-bg: #eff0f0;
 }
 
 [data-theme="dark"] {
   --background: black;
   --foreground: white;
   --primary: #ffb400;
+  --input-bg: #2b2a2a;
 }
