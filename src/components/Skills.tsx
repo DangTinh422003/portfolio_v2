@@ -4,12 +4,12 @@ import React from "react";
 
 const Skills = () => {
   return (
-    <div className="mt-28">
+    <div className="lg:mt-28 mt-10">
       <div className="separator w-1/3 border-t-[1px] border-solid border-[#424242] mx-auto"></div>
-      <h3 className="text-center uppercase font-bold text-3xl mt-14">
+      <h3 className="text-center uppercase font-bold text-3xl md:mt-14 mt-8">
         MY SKILLS
       </h3>
-      <div className="grid grid-cols-5 gap-y-11 justify-center mt-12">
+      <div className="grid md:grid-cols-3 lg:grid-cols-4 grid-cols-2 gap-y-11 justify-center mt-12">
         {SKILLS.map((skill) => (
           <div
             key={skill.name}
