@@ -24,6 +24,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/favicon.png" sizes="cover" />
+      </head>
       <body className={`${poppins.className} w-screen h-scree`}>
         <NextThemeProvider>
           <Sidebar />

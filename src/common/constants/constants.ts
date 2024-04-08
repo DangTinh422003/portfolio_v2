@@ -3,6 +3,7 @@ import { FaBookOpen, FaCode } from "react-icons/fa6";
 import { IoSchool } from "react-icons/io5";
 import { MdGeneratingTokens } from "react-icons/md";
 import { RiComputerFill } from "react-icons/ri";
+import { Project } from "../@types";
 
 export const SKILLS: {
   name: string;
@@ -111,5 +112,20 @@ export const EXPERIENDS: {
     title: "WEB DEVELOPER",
     subTitle: "The Binary Holdings",
     icon: MdGeneratingTokens,
+  },
+];
+
+export const PROJECTS: Project[] = [
+  {
+    name: "MY PORTFOLIO",
+    images: ["/background.avif"],
+    desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda vel quod exercitationem, facere quam rerum! Repellat ipsam optio molestias earum, odio non pariatur at? Repellat ducimus exercitationem sequi quo possimus.",
+    created_at: "21 Sep, 2021",
+    role: "Frontend Developer",
+    demo: "https://google.com",
+    source: "https://github.com",
+    frontend_tech: ["React", "Nextjs", "Tailwindcss"],
+    backend_tech: ["Nodejs", "Express", "MongoDB"],
+    tags: ["React", "Nextjs", "Tailwindcss", "Nodejs", "Express", "MongoDB"],
   },
 ];
