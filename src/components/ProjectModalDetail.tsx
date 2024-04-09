@@ -9,9 +9,10 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 // import required modules
-import { FreeMode, Navigation, Thumbs } from "swiper/modules";
+import { Navigation, Thumbs } from "swiper/modules";
 interface ProjectModalDetailProps {
   setIsShowModal: (value: boolean) => void;
   project: Project;
@@ -21,16 +22,15 @@ const mainSwiperConfig: SwiperOptions = {
   loop: true,
   spaceBetween: 10,
   navigation: true,
-  modules: [FreeMode, Navigation, Thumbs],
+  modules: [Navigation, Thumbs],
 };
 
 const subSwiperConfig: SwiperOptions = {
   loop: true,
   spaceBetween: 10,
-  slidesPerView: 4,
-  freeMode: true,
+  slidesPerView: 3,
   watchSlidesProgress: true,
-  modules: [FreeMode, Navigation, Thumbs],
+  modules: [Navigation, Thumbs],
 };
 
 const ProjectModalDetail = ({
@@ -45,19 +45,30 @@ const ProjectModalDetail = ({
         className="z-0 absolute w-full h-full top-0 left-0 bg-black bg-opacity-70"
         onClick={() => setIsShowModal(false)}
       ></div>
-      <div className="z-10 relative w-4/6 bg-[#252525] grid grid-cols-2 p-8 rounded-lg gap-x-5">
+      <div className="z-10 relative w-4/6 bg-[#252525] grid grid-cols-2 pt-8 px-8 pb-4 rounded-lg gap-x-5">
         <div>
-          <h2 className="mb-3 border-b-4 border-solid border-[#3b3b3b] font-bold leading-[1.5] text-3xl uppercase text-[var(--primary)]">
+          <h2 className="mb-3 border-b-4 border-solid border-[#3b3b3b] font-bold leading-[1.5] text-4xl uppercase text-[var(--primary)]">
             {project.name}
           </h2>
           <div>
-            <Swiper thumbs={{ swiper: thumbsSwiper }} {...mainSwiperConfig}>
+            <Swiper
+              thumbs={{ swiper: thumbsSwiper }}
+              style={
+                {
+                  "--swiper-navigation-color": "#fff",
+                  "--swiper-pagination-color": "#fff",
+                } as React.CSSProperties
+              }
+              className="mainSwiper mb-1"
+              {...mainSwiperConfig}
+            >
               {project.images.map((img, i) => (
                 <SwiperSlide key={i}>
                   <LazyLoadImage
                     src={img}
-                    effect="opacity"
+                    effect="blur"
                     wrapperClassName="w-full h-80"
+                    className="w-full h-full object-cover"
                   />
                 </SwiperSlide>
               ))}
@@ -67,8 +78,9 @@ const ProjectModalDetail = ({
                 <SwiperSlide key={i}>
                   <LazyLoadImage
                     src={img}
-                    effect="opacity"
-                    wrapperClassName="w-full h-80"
+                    effect="blur"
+                    wrapperClassName="w-full h-28"
+                    className="w-full h-full object-cover"
                   />
                 </SwiperSlide>
               ))}
@@ -76,11 +88,11 @@ const ProjectModalDetail = ({
           </div>
         </div>
         <div className="">
-          <h2 className="mb-3 border-b-4 border-solid border-[#3b3b3b] font-bold leading-[1.5] text-3xl uppercase text-[var(--primary)]">
+          <h2 className="mb-3 border-b-4 border-solid border-[#3b3b3b] font-bold leading-[1.5] text-4xl uppercase text-[var(--primary)]">
             details
           </h2>
           <ul className="font-light">
-            <li className="mb-4 leading-[1.7]">{project.desc}</li>
+            <li className="mb-4 leading-[2]">{project.desc}</li>
             <li className="mb-2">
               <span className="opacity-80">Created - </span>
               {project.created_at}
@@ -102,9 +114,13 @@ const ProjectModalDetail = ({
             </li>
             <li className="mb-2">
               <span className="opacity-80">Demo - </span>{" "}
-              <span className="text-[var(--primary)] cursor-pointer">
+              <a
+                className="text-[var(--primary)] cursor-pointer font-semibold"
+                href={project.demo}
+                target="_blank"
+              >
                 {project.demo}
-              </span>
+              </a>
             </li>
             <li className="mb-2">
               <span className="opacity-80">Source - </span> {project.source}

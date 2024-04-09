@@ -7,7 +7,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    user-select: none;
   }
 
   ::-webkit-scrollbar {
@@ -39,4 +38,13 @@
   --foreground: white;
   --primary: #ffb400;
   --input-bg: #2b2a2a;
+}
+
+.swiper-slide {
+  opacity: 0.4;
+}
+
+.mainSwiper .swiper-slide,
+.swiper-slide-thumb-active {
+  opacity: 1;
 }
