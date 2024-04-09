@@ -9,7 +9,7 @@ export default function Home() {
       <div className="hidden absolute z-0 top-0 left-0 bg-[var(--primary)] w-[100vw] h-[200vh] -rotate-[16deg] -translate-x-[78%] xl:block"></div>
       <ContentWrapper className="lg:0 xl:flex xl:gap-16 2xl:gap-24">
         <div className="flex-center relative mt-10 md:mt-16 lg:w-full xl:w-4/12 xl:mt-0">
-          <div className="relative shadow-2xl rounded-full overflow-hidden border-[2px] border-solid border-[var(--primary)] w-[30vh] h-[30vh] md:w-[35vh] md:h-[35vh] xl:border-0 xl:w-full xl:h-[65vh] xl:rounded-3xl 2xl:h-[75vh]">
+          <div className="relative shadow-2xl rounded-full overflow-hidden border-[2px] border-solid border-[var(--primary)] w-[15rem] h-[15rem] md:w-[20rem] md:h-[20rem] xl:w-full xl:h-[35rem] 2xl:h-[45rem] xl:border-0  xl:rounded-3xl">
             <Image
               src="/portfolio_img.png"
               alt=""
