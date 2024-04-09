@@ -1,5 +1,6 @@
 export interface Project {
   name: string;
+  thumbnail: string;
   images: string[];
   desc: string;
   created_at: string;

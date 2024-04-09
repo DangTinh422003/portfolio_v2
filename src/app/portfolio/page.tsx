@@ -30,7 +30,7 @@ const PortfolioPage = () => {
             onClick={() => handleActiveProject(pr)}
           >
             <div className="relative w-full h-72 ">
-              <Image src={pr.images[0]} alt="" sizes="auto" fill priority />
+              <Image src={pr.thumbnail} alt="" sizes="auto" fill priority />
             </div>
             <div className="flex-center absolute top-0 left-0 w-full h-full bg-black bg-opacity-70 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-fade">
               <p className="text-center uppercase text-2xl font-semibold text-white">
