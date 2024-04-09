@@ -17,22 +17,27 @@ const PortfolioPage = () => {
 
   return (
     <ContentWrapper>
-      <ProjectModalDetail
-        show={isShowModal}
-        setIsShowModal={setIsShowModal}
-        project={projectActive!}
-      />
+      {isShowModal && projectActive ? (
+        <ProjectModalDetail
+          setIsShowModal={setIsShowModal}
+          project={projectActive}
+        />
+      ) : (
+        <></>
+      )}
       <div className="grid grid-cols-3 gap-6">
         {PROJECTS.map((pr) => (
           <div
             className="relative group cursor-pointer rounded-md overflow-hidden"
             key={pr.name}
-            onClick={() => handleActiveProject(pr)}
           >
-            <div className="relative w-full h-72 ">
+            <div className="relative w-full h-72">
               <Image src={pr.thumbnail} alt="" sizes="auto" fill priority />
             </div>
-            <div className="flex-center absolute top-0 left-0 w-full h-full bg-black bg-opacity-70 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-fade">
+            <div
+              className="flex-center absolute top-0 left-0 w-full h-full bg-black bg-opacity-70 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-fade"
+              onClick={() => handleActiveProject(pr)}
+            >
               <p className="text-center uppercase text-2xl font-semibold text-white">
                 {pr.name}
               </p>

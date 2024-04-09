@@ -119,7 +119,14 @@ export const PROJECTS: Project[] = [
   {
     name: "MY PORTFOLIO",
     thumbnail: "/background.avif",
-    images: ["/background.avif"],
+    images: [
+      "/background.avif",
+      "/background.avif",
+      "/background.avif",
+      "/background.avif",
+      "/background.avif",
+      "/background.avif",
+    ],
     desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda vel quod exercitationem, facere quam rerum! Repellat ipsam optio molestias earum, odio non pariatur at? Repellat ducimus exercitationem sequi quo possimus.",
     created_at: "21 Sep, 2021",
     role: "Frontend Developer",
