@@ -1,7 +1,10 @@
-import ContentWrapper from "@/components/ContentWrapper";
-import LinkButton from "@/components/LinkButton";
+"use client";
 import Image from "next/image";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { TypeAnimation } from "react-type-animation";
+
+import ContentWrapper from "@/components/ContentWrapper";
+import LinkButton from "@/components/LinkButton";
 
 export default function Home() {
   return (
@@ -23,10 +26,15 @@ export default function Home() {
         <div className="flex-center lg:w-full xl:w-8/12">
           <div>
             <h1 className="font-bold relative leading-[1.05] text-center text-3xl mt-8 md:mt-10 md:text-5xl xl:text-left xl:text-5xl 2xl:text-6xl 2xl:leading-[1.2] xl:ml-10 xl:mt-0">
-              <span className="text-[var(--primary)] before:content-[''] before:w-11 before:h-2 before:absolute before:-left-16 before:top-7 before:rounded-lg before:bg-[var(--primary)] before:hidden before:xl:block">
-                I&apos;m Cao Dang Tinh
-              </span>
-              <br /> Web Developer !
+              <TypeAnimation
+                sequence={["I'm Cao Dang Tinh", 1000, "A Fullstack", 1000]}
+                speed={50}
+                repeat={Infinity}
+                wrapper="span"
+                className="text-[var(--primary)] before:content-[''] before:w-11 before:h-2 before:absolute before:-left-16 before:top-7 before:rounded-lg before:bg-[var(--primary)] before:hidden before:xl:block"
+              />
+              <br />
+              Web Developer !
             </h1>
             <p className="mt-8 font-normal text-md text-center lg:px-10 lg:text-justify xl:pl-0 xl:pr-20 2xl:px-0 xl:text-base 2xl:text-lg leading-[1.8] xl:leading-[2] 2xl:leading-[2]">
               Hi, I am currently a third-year student majoring in Computer

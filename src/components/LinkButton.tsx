@@ -1,5 +1,5 @@
-import Link from "next/link";
 import React, { FC, HTMLAttributes } from "react";
+import Link from "next/link";
 
 interface LinkButtonProps extends HTMLAttributes<HTMLButtonElement> {
   title: string;
