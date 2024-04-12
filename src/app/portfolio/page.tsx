@@ -1,10 +1,12 @@
 "use client";
+import React from "react";
+import Image from "next/image";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+
 import { Project } from "@/common/@types";
 import { PROJECTS } from "@/common/constants/constants";
 import ContentWrapper from "@/components/ContentWrapper";
 import ProjectModalDetail from "@/components/ProjectModalDetail";
-import Image from "next/image";
-import React from "react";
 
 const PortfolioPage = () => {
   const [isShowModal, setIsShowModal] = React.useState(false);
@@ -25,15 +27,19 @@ const PortfolioPage = () => {
       ) : (
         <></>
       )}
-      <div className="grid grid-cols-3 gap-6">
+      <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-6 pb-24 lg:pb-10">
         {PROJECTS.map((pr) => (
           <div
             className="relative group cursor-pointer rounded-md overflow-hidden"
             key={pr.id}
           >
-            <div className="relative w-full h-72">
-              <Image src={pr.thumbnail} alt="" sizes="auto" fill priority />
-            </div>
+            <LazyLoadImage
+              alt=""
+              src={pr.thumbnail}
+              effect="blur"
+              wrapperClassName="relative w-full lg:h-72"
+              className="w-full h-full object-cover"
+            />
             <div
               className="flex-center absolute top-0 left-0 w-full h-full bg-black bg-opacity-80 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-fade"
               onClick={() => handleActiveProject(pr)}

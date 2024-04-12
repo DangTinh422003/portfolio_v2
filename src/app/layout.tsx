@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
-import Sidebar from "@/components/Sidebar";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
-import "@/common/styles/reset.css";
-import "@/common/styles/globals.css";
-import ToggleTheme from "@/components/ToggleTheme";
 import NextThemeProvider from "@/common/providers/NextThemeProvider";
+import "@/common/styles/globals.css";
+import "@/common/styles/reset.css";
+import Sidebar from "@/components/Sidebar";
+import ToggleTheme from "@/components/ToggleTheme";
+
 
 const poppins = Poppins({
   subsets: ["latin"],

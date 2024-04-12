@@ -1,6 +1,6 @@
 "use client";
-import Image from "next/image";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import { TypeAnimation } from "react-type-animation";
 
 import ContentWrapper from "@/components/ContentWrapper";
@@ -8,20 +8,17 @@ import LinkButton from "@/components/LinkButton";
 
 export default function Home() {
   return (
-    <main className="min-h-screen w-screen flex relative z-10 overflow-hidden max-w-[100vw] xl:max-h-[100vh]">
+    <main className="min-h-screen w-screen flex relative z-10 overflow-x-hidden max-w-[100vw] xl:max-h-[100vh]">
       <div className="hidden absolute z-0 top-0 left-0 bg-[var(--primary)] w-[100vw] h-[200vh] -rotate-[16deg] -translate-x-[78%] xl:block"></div>
       <ContentWrapper className="lg:0 xl:flex xl:gap-16 2xl:gap-24">
         <div className="flex-center relative mt-10 md:mt-16 lg:w-full xl:w-4/12 xl:mt-0">
-          <div className="relative shadow-2xl rounded-full overflow-hidden border-[2px] border-solid border-[var(--primary)] w-[15rem] h-[15rem] md:w-[20rem] md:h-[20rem] xl:w-full xl:h-[35rem] 2xl:h-[45rem] xl:border-0  xl:rounded-3xl">
-            <Image
-              src="/portfolio_img.png"
-              alt=""
-              sizes="auto"
-              fill={true}
-              placeholder="blur"
-              blurDataURL="/portfolio_img.png"
-            />
-          </div>
+          <LazyLoadImage
+            alt=""
+            src="/portfolio_img.png"
+            effect="blur"
+            wrapperClassName="relative shadow-2xl rounded-full overflow-hidden border-[2px] border-solid border-[var(--primary)] w-[15rem] h-[15rem] md:w-[20rem] md:h-[20rem] xl:w-full xl:h-[35rem] 2xl:h-[45rem] xl:border-0  xl:rounded-3xl"
+            className="w-full h-full object-cover"
+          />
         </div>
         <div className="flex-center lg:w-full xl:w-8/12">
           <div>
