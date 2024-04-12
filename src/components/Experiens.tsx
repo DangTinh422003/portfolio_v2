@@ -1,5 +1,6 @@
-import { EXPERIENDS } from "@/common/constants/constants";
 import React from "react";
+
+import { EXPERIENDS } from "@/common/constants/constants";
 
 const Experiens = () => {
   return (

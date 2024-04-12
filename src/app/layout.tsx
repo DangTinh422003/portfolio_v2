@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
+import AosAnimationProvider from "@/common/providers/AosAnimationProvider";
 import NextThemeProvider from "@/common/providers/NextThemeProvider";
 import "@/common/styles/globals.css";
 import "@/common/styles/reset.css";
 import Sidebar from "@/components/Sidebar";
 import ToggleTheme from "@/components/ToggleTheme";
-
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -30,13 +30,15 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.png" sizes="cover" />
       </head>
       <body className={`${poppins.className} w-screen h-scree`}>
-        <NextThemeProvider>
-          <Sidebar />
-          <ToggleTheme />
-          <main className="h-screen w-screen max-w-screen overflow-x-hidden">
-            {children}
-          </main>
-        </NextThemeProvider>
+        <AosAnimationProvider>
+          <NextThemeProvider>
+            <Sidebar />
+            <ToggleTheme />
+            <main className="h-screen w-screen max-w-screen overflow-x-hidden">
+              {children}
+            </main>
+          </NextThemeProvider>
+        </AosAnimationProvider>
       </body>
     </html>
   );

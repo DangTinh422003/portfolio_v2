@@ -32,6 +32,8 @@ const PortfolioPage = () => {
           <div
             className="relative group cursor-pointer rounded-md overflow-hidden"
             key={pr.id}
+            data-aos="fade-right"
+            data-aos-delay={Number(pr.id) * 200}
           >
             <LazyLoadImage
               alt=""

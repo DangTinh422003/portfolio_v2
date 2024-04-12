@@ -1,13 +1,19 @@
 "use client";
 import React from "react";
-import LinkButton from "./LinkButton";
 import { FaArrowDown } from "react-icons/fa";
+
+import LinkButton from "./LinkButton";
 
 const AboutInfoSection = () => {
   return (
     <div className="grid xl:grid-cols-2 grid-cols-1">
       {/* LEFT COL */}
-      <div className="mb-6">
+
+      <div
+        data-aos="fade-up-right"
+        data-aos-delay="300"
+        data-aos-duration="700"
+      >
         <h3 className="uppercase text-3xl font-semibold">PERSONAL INFOS</h3>
         <ul className="grid md:grid-cols-2">
           <li className="mt-6">
@@ -48,9 +54,13 @@ const AboutInfoSection = () => {
           />
         </div>
       </div>
-
       {/* RIGHT COL */}
-      <div className="grid md:grid-cols-2 grid-cols-1 gap-x-5 md:gap-y-5 gap-y-3 items-center justify-center">
+      <div
+        className="grid md:grid-cols-2 grid-cols-1 gap-x-5 md:gap-y-5 gap-y-3 items-center justify-center"
+        data-aos-delay="300"
+        data-aos-duration="700"
+        data-aos="fade-up-left"
+      >
         <div className="cursor-pointer hover:scale-[1.03] transition-fade w-full h-full border-[#424242] border border-solid rounded-lg p-9 shadow-xl">
           <p className="text-6xl font-bold text-[var(--primary)]">
             2<span className="text-5xl ml-1 relative -top-5">+</span>

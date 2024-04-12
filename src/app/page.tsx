@@ -8,10 +8,13 @@ import LinkButton from "@/components/LinkButton";
 
 export default function Home() {
   return (
-    <main className="min-h-screen w-screen flex relative z-10 overflow-x-hidden max-w-[100vw] xl:max-h-[100vh]">
+    <main className="h-screen w-screen flex relative z-[5] overflow-hidden max-w-[100vw] xl:max-h-[100vh]">
       <div className="hidden absolute z-0 top-0 left-0 bg-[var(--primary)] w-[100vw] h-[200vh] -rotate-[16deg] -translate-x-[78%] xl:block"></div>
       <ContentWrapper className="lg:0 xl:flex xl:gap-16 2xl:gap-24">
-        <div className="flex-center relative mt-10 md:mt-16 lg:w-full xl:w-4/12 xl:mt-0">
+        <div
+          className="flex-center relative mt-10 md:mt-16 lg:w-full xl:w-4/12 xl:mt-0"
+          data-aos="fade-right"
+        >
           <LazyLoadImage
             alt=""
             src="/portfolio_img.png"
@@ -20,7 +23,13 @@ export default function Home() {
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="flex-center lg:w-full xl:w-8/12">
+        <div
+          className="flex-center lg:w-full xl:w-8/12"
+          data-aos="fade-left"
+          data-aos-duration="500"
+          data-aos-offset="50"
+          data-aos-delay="300"
+        >
           <div>
             <h1 className="font-bold relative leading-[1.05] text-center text-3xl mt-8 md:mt-10 md:text-5xl xl:text-left xl:text-5xl 2xl:text-6xl 2xl:leading-[1.2] xl:ml-10 xl:mt-0">
               <TypeAnimation
