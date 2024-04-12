@@ -56,7 +56,7 @@ const AboutInfoSection = () => {
       </div>
       {/* RIGHT COL */}
       <div
-        className="grid md:grid-cols-2 grid-cols-1 gap-x-5 md:gap-y-5 gap-y-3 items-center justify-center"
+        className="grid md:grid-cols-2 grid-cols-1 gap-x-5 md:gap-y-5 gap-y-3 items-center justify-center mt-2 lg:mt-0"
         data-aos-delay="300"
         data-aos-duration="700"
         data-aos="fade-up-left"

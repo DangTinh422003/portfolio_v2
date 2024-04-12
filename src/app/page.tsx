@@ -8,7 +8,7 @@ import LinkButton from "@/components/LinkButton";
 
 export default function Home() {
   return (
-    <main className="h-screen w-screen flex relative z-[5] overflow-hidden max-w-[100vw] xl:max-h-[100vh]">
+    <main className="lg:h-screen w-screen flex relative z-[5] overflow-hidden max-w-[100vw] xl:max-h-[100vh]">
       <div className="hidden absolute z-0 top-0 left-0 bg-[var(--primary)] w-[100vw] h-[200vh] -rotate-[16deg] -translate-x-[78%] xl:block"></div>
       <ContentWrapper className="lg:0 xl:flex xl:gap-16 2xl:gap-24">
         <div
