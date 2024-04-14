@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 import { Project } from "@/common/@types";
@@ -32,8 +31,6 @@ const PortfolioPage = () => {
           <div
             className="relative group cursor-pointer rounded-md overflow-hidden"
             key={pr.id}
-            data-aos="fade-right"
-            data-aos-delay={Number(pr.id) * 200}
           >
             <LazyLoadImage
               alt=""
