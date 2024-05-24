@@ -1,3 +1,4 @@
+"use client";
 import { ContactForm } from "@/components/ContactForm";
 import ContactInfoGroup from "@/components/ContactInfoGroup";
 import ContentWrapper from "@/components/ContentWrapper";

@@ -7,7 +7,7 @@ const ContactInfoGroup = () => {
   return (
     <div>
       <h3 className="font-bold text-3xl">DON&apos;T BE SHY !</h3>
-      <p className="mt-4">
+      <p className="mt-4 leading-[1.5]">
         Feel free to get in touch with me. I am always open to discussing new
         projects, creative ideas or opportunities to be part of your visions.
       </p>

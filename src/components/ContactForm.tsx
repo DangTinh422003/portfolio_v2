@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
-import LinkButton from "./LinkButton";
 import { IoIosSend } from "react-icons/io";
 import * as Yup from "yup";
 import { Field, Form, Formik, FormikHelpers } from "formik";
+import { toast } from "react-toastify";
 
 export interface IContactForm {
   username: string;
@@ -33,7 +33,8 @@ export const ContactForm = () => {
     values: IContactForm,
     formikHelpers: FormikHelpers<IContactForm>
   ) => {
-    console.log(values);
+    toast.success("Message sent successfully!");
+    formikHelpers.resetForm();
   };
 
   return (
@@ -110,7 +111,17 @@ export const ContactForm = () => {
             </div>
           </div>
           <div className="mt-6 flex-center md:justify-start">
-            <LinkButton title="send message" icon={IoIosSend} href="" />
+            <button
+              type="submit"
+              className="group h-[50px] rounded-full relative transition-fade"
+            >
+              <div className="absolute h-[52px] w-[52px] bg-[var(--primary)] flex-center rounded-full -top-[1px] -left-[1px] group-hover:left-[calc(100%-50px)] transition-fade">
+                <IoIosSend className="text-white text-xl" />
+              </div>
+              <p className="h-full rounded-full shadow-2xl flex-center pl-16 pr-6 group-hover:bg-[var(--primary)] group-hover:text-white group-hover:pl-6 group-hover:pr-16 uppercase font-semibold text-lg transition-fade outline outline-[2px] outline-[var(--primary)]">
+                send message
+              </p>
+            </button>
           </div>
         </Form>
       )}
