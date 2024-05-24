@@ -64,7 +64,7 @@ export const ContactForm = () => {
             </div>
             <div className="col-span-2 md:col-span-1">
               <Field
-                type="email"
+                type="text"
                 className="w-full rounded-full h-12 xl:h-14 px-10 bg-[var(--input-bg)] border-none outline-none focus:outline focus:outline-[var(--primary)] outline-[2px]"
                 placeholder="YOUR EMAIL"
                 autoComplete={"disable"}
