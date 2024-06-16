@@ -6,7 +6,7 @@ import LinkButton from "./LinkButton";
 
 const AboutInfoSection = () => {
   return (
-    <div className="grid xl:grid-cols-2 grid-cols-1">
+    <div className="grid grid-cols-1 xl:grid-cols-2">
       {/* LEFT COL */}
 
       <div
@@ -14,7 +14,7 @@ const AboutInfoSection = () => {
         data-aos-delay="300"
         data-aos-duration="700"
       >
-        <h3 className="uppercase text-3xl font-semibold">PERSONAL INFOS</h3>
+        <h3 className="text-3xl font-semibold uppercase">PERSONAL INFOS</h3>
         <ul className="grid md:grid-cols-2">
           <li className="mt-6">
             <span className="opacity-70">First name:</span> Cao
@@ -46,7 +46,7 @@ const AboutInfoSection = () => {
             <span className="opacity-70">Jobs :</span> Fullstack Web Developer
           </li>
         </ul>
-        <div className="lg:mt-10 mt-5">
+        <div className="mt-5 lg:mt-10">
           <LinkButton
             href="/CV_Cao_Dang_Tinh.pdf"
             icon={FaArrowDown}
@@ -56,40 +56,40 @@ const AboutInfoSection = () => {
       </div>
       {/* RIGHT COL */}
       <div
-        className="grid md:grid-cols-2 grid-cols-1 gap-x-5 md:gap-y-5 gap-y-3 items-center justify-center mt-2 lg:mt-0"
+        className="mt-2 grid grid-cols-1 items-center justify-center gap-x-5 gap-y-3 md:grid-cols-2 md:gap-y-5 lg:mt-0"
         data-aos-delay="300"
         data-aos-duration="700"
         data-aos="fade-up-left"
       >
-        <div className="cursor-pointer hover:scale-[1.03] transition-fade w-full h-full border-[#424242] border border-solid rounded-lg p-9 shadow-xl">
+        <div className="transition-fade h-full w-full cursor-pointer rounded-lg border border-solid border-[#424242] p-9 shadow-xl hover:scale-[1.03]">
           <p className="text-6xl font-bold text-[var(--primary)]">
-            2<span className="text-5xl ml-1 relative -top-5">+</span>
+            2<span className="relative -top-5 ml-1 text-5xl">+</span>
           </p>
-          <p className="text-xl mt-5 ml-12 uppercase font-normal relative before:content-[''] before:h-1 before:w-8 before:bg-[#424242] before:absolute-center before:-left-10 before:rounded-full">
+          <p className="before:absolute-center relative ml-12 mt-5 text-xl font-normal uppercase before:-left-10 before:h-1 before:w-8 before:rounded-full before:bg-[#424242] before:content-['']">
             YEARS OF <br /> EXPERIENCE
           </p>
         </div>
-        <div className="cursor-pointer hover:scale-[1.03] transition-fade w-full h-full border-[#424242] border border-solid rounded-lg p-9 shadow-xl">
+        <div className="transition-fade h-full w-full cursor-pointer rounded-lg border border-solid border-[#424242] p-9 shadow-xl hover:scale-[1.03]">
           <p className="text-6xl font-bold text-[var(--primary)]">
-            13<span className="text-5xl ml-1 relative -top-5">+</span>
+            13<span className="relative -top-5 ml-1 text-5xl">+</span>
           </p>
-          <p className="text-xl mt-5 ml-12 uppercase font-normal relative before:content-[''] before:h-1 before:w-8 before:bg-[#424242] before:absolute-center before:-left-10 before:rounded-full">
+          <p className="before:absolute-center relative ml-12 mt-5 text-xl font-normal uppercase before:-left-10 before:h-1 before:w-8 before:rounded-full before:bg-[#424242] before:content-['']">
             COMPLETED <br /> PROJECTS
           </p>
         </div>
-        <div className="cursor-pointer hover:scale-[1.03] transition-fade w-full h-full border-[#424242] border border-solid rounded-lg p-9 shadow-xl">
+        <div className="transition-fade h-full w-full cursor-pointer rounded-lg border border-solid border-[#424242] p-9 shadow-xl hover:scale-[1.03]">
           <p className="text-6xl font-bold text-[var(--primary)]">
-            1<span className="text-5xl ml-1 relative -top-5">+</span>
+            1<span className="relative -top-5 ml-1 text-5xl">+</span>
           </p>
-          <p className="text-xl mt-5 ml-12 uppercase font-normal relative before:content-[''] before:h-1 before:w-8 before:bg-[#424242] before:absolute-center before:-left-10 before:rounded-full">
+          <p className="before:absolute-center relative ml-12 mt-5 text-xl font-normal uppercase before:-left-10 before:h-1 before:w-8 before:rounded-full before:bg-[#424242] before:content-['']">
             CERTIFICATES
           </p>
         </div>
-        <div className="cursor-pointer hover:scale-[1.03] transition-fade w-full h-full border-[#424242] border border-solid rounded-lg p-9 shadow-xl">
+        <div className="transition-fade h-full w-full cursor-pointer rounded-lg border border-solid border-[#424242] p-9 shadow-xl hover:scale-[1.03]">
           <p className="text-6xl font-bold text-[var(--primary)]">
-            1<span className="text-5xl ml-1 relative -top-5">+</span>
+            1<span className="relative -top-5 ml-1 text-5xl">+</span>
           </p>
-          <p className="text-xl mt-5 ml-12 uppercase font-normal relative before:content-[''] before:h-1 before:w-8 before:bg-[#424242] before:absolute-center before:-left-10 before:rounded-full">
+          <p className="before:absolute-center relative ml-12 mt-5 text-xl font-normal uppercase before:-left-10 before:h-1 before:w-8 before:rounded-full before:bg-[#424242] before:content-['']">
             AWARD <br /> WON
           </p>
         </div>

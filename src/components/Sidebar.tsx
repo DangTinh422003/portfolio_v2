@@ -38,18 +38,18 @@ const Sidebar = () => {
   const router = useRouter();
 
   return (
-    <ul className="fixed flex py-3 px-4 justify-center gap-10 bottom-0 left-0 w-full z-10 bg-gray lg:bg-transparent lg:bottom-auto lg:left-auto lg:right-[30px] lg:p-0 lg:top-1/2 lg:-translate-y-1/2 lg:flex-col lg:w-auto lg:justify-start lg:py-auto lg:px-auto lg:gap-5">
+    <ul className="lg:py-auto lg:px-auto fixed bottom-0 left-0 z-10 flex w-full justify-center gap-10 bg-gray px-4 py-3 lg:bottom-auto lg:left-auto lg:right-[30px] lg:top-1/2 lg:w-auto lg:-translate-y-1/2 lg:flex-col lg:justify-start lg:gap-5 lg:bg-transparent lg:p-0">
       {SIDEBARS.map((sidebar) => (
-        <li className="cursor-pointer relative z-10 group" key={sidebar.title}>
+        <li className="group relative z-10 cursor-pointer" key={sidebar.title}>
           <div onClick={() => router.push(sidebar.href)}>
             <div
-              className={`w-[50px] h-[50px]  ${
+              className={`h-[50px] w-[50px] ${
                 pathName === sidebar.href ? "bg-[var(--primary)]" : "bg-gray"
-              } text-white flex-center rounded-full text-xl relative z-10 group-hover:bg-[var(--primary)] transition-fade shadow-xl`}
+              } flex-center transition-fade relative z-10 rounded-full text-xl text-white shadow-xl group-hover:bg-[var(--primary)]`}
             >
               <sidebar.icon></sidebar.icon>
             </div>
-            <p className="uppercase hidden absolute right-0 top-0 text-white flex-center bg-[var(--primary)] rounded-full h-full z-0 font-semibold opacity-0 invisible pr-8 pl-4 group-hover:pr-16 group-hover:pl-6 group-hover:opacity-100 group-hover:visible transition-fade duration-[400ms] lg:flex">
+            <p className="flex-center transition-fade invisible absolute right-0 top-0 z-0 hidden h-full rounded-full bg-[var(--primary)] pl-4 pr-8 font-semibold uppercase text-white opacity-0 duration-[400ms] group-hover:visible group-hover:pl-6 group-hover:pr-16 group-hover:opacity-100 lg:flex">
               {sidebar.title}
             </p>
           </div>

@@ -26,10 +26,10 @@ const PortfolioPage = () => {
       ) : (
         <></>
       )}
-      <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-6 pb-24 lg:pb-10">
+      <div className="grid gap-6 pb-24 lg:grid-cols-2 lg:pb-10 xl:grid-cols-3">
         {PROJECTS.map((pr) => (
           <div
-            className="relative group cursor-pointer rounded-md overflow-hidden"
+            className="group relative cursor-pointer overflow-hidden rounded-md"
             key={pr.id}
           >
             <LazyLoadImage
@@ -37,13 +37,13 @@ const PortfolioPage = () => {
               src={pr.thumbnail}
               effect="blur"
               wrapperClassName="relative w-full lg:h-72"
-              className="w-full h-full object-cover"
+              className="h-full w-full object-cover"
             />
             <div
-              className="flex-center absolute top-0 left-0 w-full h-full bg-black bg-opacity-80 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-fade"
+              className="flex-center transition-fade invisible absolute left-0 top-0 h-full w-full bg-black bg-opacity-80 opacity-0 group-hover:visible group-hover:opacity-100"
               onClick={() => handleActiveProject(pr)}
             >
-              <p className="text-center uppercase text-3xl font-bold text-white">
+              <p className="text-center text-3xl font-bold uppercase text-white">
                 {pr.name}
               </p>
             </div>

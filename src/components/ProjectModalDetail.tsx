@@ -40,17 +40,17 @@ const ProjectModalDetail = ({
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperClass>();
 
   return (
-    <div className="fixed z-50 min-h-screen w-screen top-0 left-0 flex-center transition-fade text-white">
+    <div className="flex-center transition-fade fixed left-0 top-0 z-50 min-h-screen w-screen text-white">
       <div
-        className="z-0 absolute w-full h-full top-0 left-0 bg-black bg-opacity-70"
+        className="absolute left-0 top-0 z-0 h-full w-full bg-black bg-opacity-70"
         onClick={() => setIsShowModal(false)}
       ></div>
-      <div className="overflow-y-scroll z-10 relative w-screen h-screen lg:h-auto lg:w-5/6 2xl:w-4/6 bg-[#252525] grid grid-cols-2 pt-8 p-2 lg:px-8 pb-4 rounded-lg gap-x-5">
-        <div className="lg:col-span-1 col-span-2">
-          <h2 className="mb-3 border-b-4 items-center border-solid border-[#3b3b3b] font-bold leading-[1.5] text-4xl uppercase text-[var(--primary)] flex justify-between">
+      <div className="relative z-10 grid h-screen w-screen grid-cols-2 gap-x-5 overflow-y-scroll rounded-lg bg-[#252525] p-2 pb-4 pt-8 lg:h-auto lg:w-5/6 lg:px-8 2xl:w-4/6">
+        <div className="col-span-2 lg:col-span-1">
+          <h2 className="mb-3 flex items-center justify-between border-b-4 border-solid border-[#3b3b3b] text-4xl font-bold uppercase leading-[1.5] text-[var(--primary)]">
             {project.name}
             <IoCloseCircleSharp
-              className="rounded-full text-4xl text-[var(--primary)] flex-center lg:hidden"
+              className="flex-center rounded-full text-4xl text-[var(--primary)] lg:hidden"
               onClick={() => setIsShowModal(false)}
             />
           </h2>
@@ -71,7 +71,7 @@ const ProjectModalDetail = ({
                   src={img}
                   effect="blur"
                   wrapperClassName="w-full h-52 md:h-72 xl:h-80"
-                  className="w-full h-full object-cover"
+                  className="h-full w-full object-cover"
                 />
               </SwiperSlide>
             ))}
@@ -83,17 +83,17 @@ const ProjectModalDetail = ({
                   src={img}
                   effect="blur"
                   wrapperClassName="w-full h-28"
-                  className="w-full h-full object-cover"
+                  className="h-full w-full object-cover"
                 />
               </SwiperSlide>
             ))}
           </Swiper>
         </div>
-        <div className="mt-4 lg:mt-0 lg:col-span-1 col-span-2">
-          <h2 className="mb-3 border-b-4 border-solid border-[#3b3b3b] font-bold leading-[1.5] text-4xl uppercase text-[var(--primary)]">
+        <div className="col-span-2 mt-4 lg:col-span-1 lg:mt-0">
+          <h2 className="mb-3 border-b-4 border-solid border-[#3b3b3b] text-4xl font-bold uppercase leading-[1.5] text-[var(--primary)]">
             details
           </h2>
-          <ul className="font-light leading-[1.4] text-sm xl:text-base">
+          <ul className="text-sm font-light leading-[1.4] xl:text-base">
             <li className="mb-4 leading-[1.7]">{project.desc}</li>
             <li className="mb-2">
               <span className="opacity-80">Created - </span>
@@ -117,7 +117,7 @@ const ProjectModalDetail = ({
             <li className="mb-2">
               <span className="opacity-80">Demo - </span>{" "}
               <a
-                className="text-[var(--primary)] cursor-pointer font-semibold"
+                className="cursor-pointer font-semibold text-[var(--primary)]"
                 href={project.demo}
                 target="_blank"
               >

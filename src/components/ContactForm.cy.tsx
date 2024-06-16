@@ -12,19 +12,19 @@ describe("Test Contact form", () => {
 
     cy.get(":nth-child(1) > .text-red-500").should(
       "have.text",
-      "Name is required!"
+      "Name is required!",
     );
     cy.get(":nth-child(2) > .text-red-500").should(
       "have.text",
-      "Email is required!"
+      "Email is required!",
     );
     cy.get(":nth-child(3) > .text-red-500").should(
       "have.text",
-      "Subject is required!"
+      "Subject is required!",
     );
     cy.get(":nth-child(4) > .text-red-500").should(
       "have.text",
-      "Message is required!"
+      "Message is required!",
     );
   });
 
@@ -39,7 +39,7 @@ describe("Test Contact form", () => {
 
     cy.get(":nth-child(2) > .text-red-500").should(
       "have.text",
-      "Email is invalid!"
+      "Email is invalid!",
     );
   });
 
@@ -51,7 +51,7 @@ describe("Test Contact form", () => {
 
     cy.get(":nth-child(1) > .text-red-500").should(
       "have.text",
-      "Name is required!"
+      "Name is required!",
     );
   });
 });

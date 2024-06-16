@@ -17,11 +17,11 @@ const LinkButton = ({
   return (
     <button className={`inline-block ${className}`} {...rest}>
       <Link href={href}>
-        <div className="group h-[50px] rounded-full relative transition-fade">
-          <div className="absolute h-[52px] w-[52px] bg-[var(--primary)] flex-center rounded-full -top-[1px] -left-[1px] group-hover:left-[calc(100%-50px)] transition-fade">
-            <Icon className="text-white text-xl" />
+        <div className="transition-fade group relative h-[50px] rounded-full">
+          <div className="flex-center transition-fade absolute -left-[1px] -top-[1px] h-[52px] w-[52px] rounded-full bg-[var(--primary)] group-hover:left-[calc(100%-50px)]">
+            <Icon className="text-xl text-white" />
           </div>
-          <p className="h-full rounded-full shadow-2xl flex-center pl-16 pr-6 group-hover:bg-[var(--primary)] group-hover:text-white group-hover:pl-6 group-hover:pr-16 uppercase font-semibold text-lg transition-fade outline outline-[2px] outline-[var(--primary)]">
+          <p className="flex-center transition-fade h-full rounded-full pl-16 pr-6 text-lg font-semibold uppercase shadow-2xl outline outline-[2px] outline-[var(--primary)] group-hover:bg-[var(--primary)] group-hover:pl-6 group-hover:pr-16 group-hover:text-white">
             {title}
           </p>
         </div>

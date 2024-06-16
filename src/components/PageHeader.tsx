@@ -9,12 +9,12 @@ interface PageHeaderProps {
 const PageHeader = ({ mainTitle, subTitle, ...rest }: PageHeaderProps) => {
   return (
     <div className="flex-center" data-aos="zoom-out-up">
-      <div className="mx-auto text-center inline-block uppercase font-[900] relative">
-        <h1 className="text-4xl md:text-6xl py-10 md:py-24 z-10 relative">
+      <div className="relative mx-auto inline-block text-center font-[900] uppercase">
+        <h1 className="relative z-10 py-10 text-4xl md:py-24 md:text-6xl">
           {mainTitle.normal}{" "}
           <span className="text-[var(--primary)]">{mainTitle.strong}</span>
         </h1>
-        <p className="absolute-center text-6xl md:text-9xl opacity-10 z-0">
+        <p className="absolute-center z-0 text-6xl opacity-10 md:text-9xl">
           {subTitle}
         </p>
       </div>

@@ -29,12 +29,12 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.png" sizes="cover" />
       </head>
-      <body className={`${poppins.className} w-screen h-scree`}>
+      <body className={`${poppins.className} h-scree w-screen`}>
         <AosAnimationProvider>
           <NextThemeProvider>
             <Sidebar />
             <ToggleTheme />
-            <main className="h-screen w-screen max-w-screen overflow-x-hidden">
+            <main className="max-w-screen h-screen w-screen overflow-x-hidden">
               {children}
             </main>
           </NextThemeProvider>
