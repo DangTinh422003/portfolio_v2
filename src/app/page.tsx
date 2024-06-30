@@ -1,4 +1,5 @@
 "use client";
+import { motion } from "framer-motion";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { TypeAnimation } from "react-type-animation";
@@ -11,29 +12,27 @@ export default function Home() {
     <main className="relative z-[5] flex w-screen max-w-[100vw] overflow-hidden lg:h-screen xl:max-h-[100vh]">
       <div className="absolute left-0 top-0 z-0 hidden h-[200vh] w-[100vw] -translate-x-[78%] -rotate-[16deg] bg-[var(--primary)] xl:block"></div>
       <ContentWrapper className="lg:0 xl:flex xl:gap-16 2xl:gap-24">
-        <div
+        <motion.div
+          animate={{
+            translateX: [-100, 30, 0],
+            opacity: [0.8, 1],
+          }}
+          transition={{ ease: "easeOut", duration: 0.5, bounce: 0.7 }}
           className="flex-center relative mt-10 md:mt-16 lg:w-full xl:mt-0 xl:w-4/12"
-          data-aos="fade-right"
         >
           <LazyLoadImage
             alt=""
             src="/portfolio_img.png"
             effect="blur"
-            wrapperClassName="relative shadow-2xl rounded-full overflow-hidden border-[2px] border-solid border-[var(--primary)] w-[15rem] h-[15rem] md:w-[20rem] md:h-[20rem] xl:w-full xl:h-[35rem] 2xl:h-[45rem] xl:border-0  xl:rounded-3xl"
+            wrapperClassName="relative shadow-2xl rounded-full overflow-hidden border-[2px] border-solid border-[var(--primary)] w-[15rem] h-[15rem] md:w-[20rem] md:h-[20rem] xl:w-full xl:h-[35rem] xl:border-0  xl:rounded-3xl"
             className="h-full w-full object-cover"
           />
-        </div>
-        <div
-          className="flex-center lg:w-full xl:w-8/12"
-          data-aos="fade-left"
-          data-aos-duration="500"
-          data-aos-offset="50"
-          data-aos-delay="300"
-        >
+        </motion.div>
+        <div className="flex-center lg:w-full xl:w-8/12">
           <div>
             <h1 className="relative mt-8 text-center text-3xl font-bold leading-[1.05] md:mt-10 md:text-5xl xl:ml-10 xl:mt-0 xl:text-left xl:text-5xl 2xl:text-6xl 2xl:leading-[1.2]">
               <TypeAnimation
-                sequence={["I'm Cao Dang Tinh", 1000, "A Fullstack", 1000]}
+                sequence={["I'm Cao Dang Tinh", 1000, "Fullstack", 1000]}
                 speed={50}
                 repeat={Infinity}
                 wrapper="span"

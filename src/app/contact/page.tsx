@@ -9,15 +9,11 @@ const ContactPage = () => {
       <div className="grid grid-cols-3 gap-x-10 gap-y-4 xl:gap-16">
         <div
           className="col-span-3 xl:col-span-1"
-          data-aos-delay="400"
-          data-aos="fade-up-right"
         >
           <ContactInfoGroup />
         </div>
         <div
           className="col-span-3 pb-24 lg:pb-5 xl:col-span-2 xl:pb-0"
-          data-aos-delay="400"
-          data-aos="fade-up-left"
         >
           <ContactForm />
         </div>

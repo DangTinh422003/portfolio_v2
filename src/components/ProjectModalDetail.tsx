@@ -54,40 +54,46 @@ const ProjectModalDetail = ({
               onClick={() => setIsShowModal(false)}
             />
           </h2>
-          <Swiper
-            thumbs={{ swiper: thumbsSwiper }}
-            style={
-              {
-                "--swiper-navigation-color": "#fff",
-                "--swiper-pagination-color": "#fff",
-              } as React.CSSProperties
-            }
-            className="mainSwiper mb-1"
-            {...mainSwiperConfig}
-          >
-            {project.images.map((img, i) => (
-              <SwiperSlide key={i}>
-                <LazyLoadImage
-                  src={img}
-                  effect="blur"
-                  wrapperClassName="w-full h-52 md:h-72 xl:h-80"
-                  className="h-full w-full object-cover"
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-          <Swiper onSwiper={setThumbsSwiper} {...subSwiperConfig}>
-            {project.images.map((img, i) => (
-              <SwiperSlide key={i}>
-                <LazyLoadImage
-                  src={img}
-                  effect="blur"
-                  wrapperClassName="w-full h-28"
-                  className="h-full w-full object-cover"
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
+          <div className="flex flex-col justify-between gap-2">
+            <div>
+              <Swiper
+                thumbs={{ swiper: thumbsSwiper }}
+                style={
+                  {
+                    "--swiper-navigation-color": "#fff",
+                    "--swiper-pagination-color": "#fff",
+                  } as React.CSSProperties
+                }
+                className="mainSwiper mb-1"
+                {...mainSwiperConfig}
+              >
+                {project.images.map((img, i) => (
+                  <SwiperSlide key={i}>
+                    <LazyLoadImage
+                      src={img}
+                      effect="blur"
+                      wrapperClassName="w-full h-52 md:h-64"
+                      className="h-full w-full object-cover"
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+            <div>
+              <Swiper onSwiper={setThumbsSwiper} {...subSwiperConfig}>
+                {project.images.map((img, i) => (
+                  <SwiperSlide key={i}>
+                    <LazyLoadImage
+                      src={img}
+                      effect="blur"
+                      wrapperClassName="w-full h-24"
+                      className="h-full w-full object-cover"
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+          </div>
         </div>
         <div className="col-span-2 mt-4 lg:col-span-1 lg:mt-0">
           <h2 className="mb-3 border-b-4 border-solid border-[#3b3b3b] text-4xl font-bold uppercase leading-[1.5] text-[var(--primary)]">

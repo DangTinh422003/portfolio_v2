@@ -30,15 +30,13 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.png" sizes="cover" />
       </head>
       <body className={`${poppins.className} h-scree w-screen`}>
-        <AosAnimationProvider>
-          <NextThemeProvider>
-            <Sidebar />
-            <ToggleTheme />
-            <main className="max-w-screen h-screen w-screen overflow-x-hidden">
-              {children}
-            </main>
-          </NextThemeProvider>
-        </AosAnimationProvider>
+        <NextThemeProvider>
+          <Sidebar />
+          <ToggleTheme />
+          <main className="max-w-screen h-screen w-screen overflow-x-hidden">
+            {children}
+          </main>
+        </NextThemeProvider>
       </body>
     </html>
   );

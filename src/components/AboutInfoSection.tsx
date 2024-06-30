@@ -9,11 +9,7 @@ const AboutInfoSection = () => {
     <div className="grid grid-cols-1 xl:grid-cols-2">
       {/* LEFT COL */}
 
-      <div
-        data-aos="fade-up-right"
-        data-aos-delay="300"
-        data-aos-duration="700"
-      >
+      <div>
         <h3 className="text-3xl font-semibold uppercase">PERSONAL INFOS</h3>
         <ul className="grid md:grid-cols-2">
           <li className="mt-6">
@@ -55,12 +51,7 @@ const AboutInfoSection = () => {
         </div>
       </div>
       {/* RIGHT COL */}
-      <div
-        className="mt-2 grid grid-cols-1 items-center justify-center gap-x-5 gap-y-3 md:grid-cols-2 md:gap-y-5 lg:mt-0"
-        data-aos-delay="300"
-        data-aos-duration="700"
-        data-aos="fade-up-left"
-      >
+      <div className="mt-2 grid grid-cols-1 items-center justify-center gap-x-5 gap-y-3 md:grid-cols-2 md:gap-y-5 lg:mt-0">
         <div className="transition-fade h-full w-full cursor-pointer rounded-lg border border-solid border-[#424242] p-9 shadow-xl hover:scale-[1.03]">
           <p className="text-6xl font-bold text-[var(--primary)]">
             2<span className="relative -top-5 ml-1 text-5xl">+</span>

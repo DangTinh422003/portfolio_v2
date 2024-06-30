@@ -26,7 +26,7 @@ const PortfolioPage = () => {
       ) : (
         <></>
       )}
-      <div className="grid gap-6 pb-24 lg:grid-cols-2 lg:pb-10 xl:grid-cols-3">
+      <div className="grid gap-3 pb-24 lg:grid-cols-2 lg:pb-10 xl:grid-cols-3">
         {PROJECTS.map((pr) => (
           <div
             className="group relative cursor-pointer overflow-hidden rounded-md"
@@ -36,8 +36,8 @@ const PortfolioPage = () => {
               alt=""
               src={pr.thumbnail}
               effect="blur"
-              wrapperClassName="relative w-full lg:h-72"
-              className="h-full w-full object-cover"
+              wrapperClassName="relative w-full lg:h-64"
+              className="h-full w-full bg-white/10 object-cover"
             />
             <div
               className="flex-center transition-fade invisible absolute left-0 top-0 h-full w-full bg-black bg-opacity-80 opacity-0 group-hover:visible group-hover:opacity-100"
