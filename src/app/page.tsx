@@ -17,6 +17,10 @@ export default function Home() {
             translateX: [-20, 10, 0],
             opacity: [0, 1],
           }}
+          animate={{
+            translateX: [-20, 10, 0],
+            opacity: [0, 1],
+          }}
           transition={{ ease: "easeOut", duration: 1, bounce: 0.7 }}
           className="flex-center relative mt-10 md:mt-16 lg:w-full xl:mt-0 xl:w-4/12"
         >
@@ -32,6 +36,14 @@ export default function Home() {
           <div>
             <motion.h1
               whileInView={{
+                y: [50, -10, 0],
+                opacity: [0, 1],
+                transition: {
+                  delay: 0.3,
+                  duration: 0.5,
+                },
+              }}
+              animate={{
                 y: [50, -10, 0],
                 opacity: [0, 1],
                 transition: {
@@ -60,6 +72,14 @@ export default function Home() {
                   duration: 0.5,
                 },
               }}
+              animate={{
+                y: [50, -10, 0],
+                opacity: [0, 1],
+                transition: {
+                  delay: 0.35,
+                  duration: 0.5,
+                },
+              }}
               className="text-md mt-8 text-center font-normal leading-[1.8] lg:px-10 lg:text-justify xl:pl-0 xl:pr-20 xl:text-base xl:leading-[2] 2xl:px-0 2xl:text-lg 2xl:leading-[2]"
             >
               Hi, I am currently a third-year student majoring in Computer
@@ -81,6 +101,14 @@ export default function Home() {
                     duration: 0.5,
                   },
                 }}
+                animate={{
+                  opacity: [0, 1],
+                  x: [-20, 0],
+                  transition: {
+                    delay: 0.5,
+                    duration: 0.5,
+                  },
+                }}
                 className="hidden md:block"
               >
                 <LinkButton
@@ -91,6 +119,14 @@ export default function Home() {
               </motion.div>
               <motion.div
                 whileInView={{
+                  opacity: [0, 1],
+                  x: [-20, 0],
+                  transition: {
+                    delay: 0.7,
+                    duration: 0.5,
+                  },
+                }}
+                animate={{
                   opacity: [0, 1],
                   x: [-20, 0],
                   transition: {

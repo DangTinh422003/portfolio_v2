@@ -1,10 +1,10 @@
 "use client";
 import { FC } from "react";
-import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { FaHouse, FaUser } from "react-icons/fa6";
 import { IoMailSharp } from "react-icons/io5";
 import { MdBackpack } from "react-icons/md";
+import { v4 as uuid } from "uuid";
 
 const SIDEBARS: {
   icon: FC<any>;
@@ -39,22 +39,25 @@ const Sidebar = () => {
 
   return (
     <ul className="lg:py-auto lg:px-auto fixed bottom-0 left-0 z-10 flex w-full justify-center gap-10 bg-gray px-4 py-3 lg:bottom-auto lg:left-auto lg:right-[30px] lg:top-1/2 lg:w-auto lg:-translate-y-1/2 lg:flex-col lg:justify-start lg:gap-5 lg:bg-transparent lg:p-0">
-      {SIDEBARS.map((sidebar) => (
-        <li className="group relative z-10 cursor-pointer" key={sidebar.title}>
-          <div onClick={() => router.push(sidebar.href)}>
-            <div
-              className={`h-[50px] w-[50px] ${
-                pathName === sidebar.href ? "bg-[var(--primary)]" : "bg-gray"
-              } flex-center transition-fade relative z-10 rounded-full text-xl text-white shadow-xl group-hover:bg-[var(--primary)]`}
-            >
-              <sidebar.icon></sidebar.icon>
+      {SIDEBARS.map((sidebar) => {
+        const id = uuid();
+        return (
+          <li className="group relative z-10 cursor-pointer" key={id}>
+            <div onClick={() => router.push(sidebar.href)}>
+              <div
+                className={`h-[50px] w-[50px] ${
+                  pathName === sidebar.href ? "bg-[var(--primary)]" : "bg-gray"
+                } flex-center transition-fade relative z-10 rounded-full text-xl text-white shadow-xl group-hover:bg-[var(--primary)]`}
+              >
+                <sidebar.icon></sidebar.icon>
+              </div>
+              <p className="flex-center transition-fade invisible absolute right-0 top-0 z-0 hidden h-full rounded-full bg-[var(--primary)] pl-4 pr-8 font-semibold uppercase text-white opacity-0 duration-[400ms] group-hover:visible group-hover:pl-6 group-hover:pr-16 group-hover:opacity-100 lg:flex">
+                {sidebar.title}
+              </p>
             </div>
-            <p className="flex-center transition-fade invisible absolute right-0 top-0 z-0 hidden h-full rounded-full bg-[var(--primary)] pl-4 pr-8 font-semibold uppercase text-white opacity-0 duration-[400ms] group-hover:visible group-hover:pl-6 group-hover:pr-16 group-hover:opacity-100 lg:flex">
-              {sidebar.title}
-            </p>
-          </div>
-        </li>
-      ))}
+          </li>
+        );
+      })}
     </ul>
   );
 };

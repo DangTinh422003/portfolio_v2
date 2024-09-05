@@ -10,6 +10,8 @@ import "swiper/css/thumbs";
 import { Navigation, Thumbs } from "swiper/modules";
 import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
 import { SwiperOptions } from "swiper/types";
+import { motion } from "framer-motion";
+import { v4 as uuid } from "uuid";
 
 import { Project } from "@/common/@types";
 
@@ -67,30 +69,39 @@ const ProjectModalDetail = ({
                 className="mainSwiper mb-1"
                 {...mainSwiperConfig}
               >
-                {project.images.map((img, i) => (
-                  <SwiperSlide key={i}>
-                    <LazyLoadImage
-                      src={img}
-                      effect="blur"
-                      wrapperClassName="w-full h-52 md:h-64"
-                      className="h-full w-full object-cover"
-                    />
-                  </SwiperSlide>
-                ))}
+                {project.images.map((img, i) => {
+                  const id = uuid();
+                  return (
+                    <motion.div key={id}>
+                      <SwiperSlide>
+                        <LazyLoadImage
+                          src={img}
+                          effect="blur"
+                          wrapperClassName="w-full h-52 md:h-72 cursor-pointer select-none"
+                          className="h-full w-full object-cover"
+                        />
+                      </SwiperSlide>
+                    </motion.div>
+                  );
+                })}
               </Swiper>
             </div>
             <div>
               <Swiper onSwiper={setThumbsSwiper} {...subSwiperConfig}>
-                {project.images.map((img, i) => (
-                  <SwiperSlide key={i}>
-                    <LazyLoadImage
-                      src={img}
-                      effect="blur"
-                      wrapperClassName="w-full h-24"
-                      className="h-full w-full object-cover"
-                    />
-                  </SwiperSlide>
-                ))}
+                {project.images.map((img, i) => {
+                  const id = uuid();
+
+                  return (
+                    <SwiperSlide key={id}>
+                      <LazyLoadImage
+                        src={img}
+                        effect="blur"
+                        wrapperClassName="w-full h-24 md:h-28 cursor-pointer select-none hover:opacity-80"
+                        className="h-full w-full object-cover"
+                      />
+                    </SwiperSlide>
+                  );
+                })}
               </Swiper>
             </div>
           </div>

@@ -6,6 +6,8 @@ import { Project } from "@/common/@types";
 import { PROJECTS } from "@/common/constants/constants";
 import ContentWrapper from "@/components/ContentWrapper";
 import ProjectModalDetail from "@/components/ProjectModalDetail";
+import { motion } from "framer-motion";
+import { v4 as uuid } from "uuid";
 
 const PortfolioPage = () => {
   const [isShowModal, setIsShowModal] = React.useState(false);
@@ -27,28 +29,47 @@ const PortfolioPage = () => {
         <></>
       )}
       <div className="grid gap-3 pb-24 lg:grid-cols-2 lg:pb-10 xl:grid-cols-3">
-        {PROJECTS.map((pr) => (
-          <div
-            className="group relative cursor-pointer overflow-hidden rounded-md"
-            key={pr.id}
-          >
-            <LazyLoadImage
-              alt=""
-              src={pr.thumbnail}
-              effect="blur"
-              wrapperClassName="relative w-full lg:h-64"
-              className="h-full w-full bg-white/10 object-cover"
-            />
-            <div
-              className="flex-center transition-fade invisible absolute left-0 top-0 h-full w-full bg-black bg-opacity-80 opacity-0 group-hover:visible group-hover:opacity-100"
-              onClick={() => handleActiveProject(pr)}
+        {PROJECTS.map((pr, i) => {
+          const id = uuid();
+          return (
+            <motion.div
+              whileInView={{
+                x: [-50, 10, 0],
+                opacity: [0, 1],
+                transition: {
+                  delay: 0.5 + i * 0.1,
+                  duration: 0.5,
+                },
+              }}
+              animate={{
+                x: [-50, 10, 0],
+                opacity: [0, 1],
+                transition: {
+                  delay: 0.5 + i * 0.1,
+                  duration: 0.5,
+                },
+              }}
+              className="group relative h-56 w-full cursor-pointer overflow-hidden rounded-md bg-white/10 md:h-64"
+              key={id}
             >
-              <p className="text-center text-3xl font-bold uppercase text-white">
-                {pr.name}
-              </p>
-            </div>
-          </div>
-        ))}
+              <LazyLoadImage
+                alt=""
+                src={pr.thumbnail}
+                effect="blur"
+                wrapperClassName="relative h-full w-full"
+                className="h-full w-full bg-white/10 object-cover"
+              />
+              <div
+                className="flex-center transition-fade invisible absolute left-0 top-0 h-full w-full bg-black bg-opacity-80 opacity-0 group-hover:visible group-hover:opacity-100"
+                onClick={() => handleActiveProject(pr)}
+              >
+                <p className="text-center text-3xl font-bold uppercase text-white">
+                  {pr.name}
+                </p>
+              </div>
+            </motion.div>
+          );
+        })}
       </div>
     </ContentWrapper>
   );

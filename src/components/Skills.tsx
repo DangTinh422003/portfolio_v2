@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-
+import { v4 as uuid } from "uuid";
 import { SKILLS } from "@/common/constants/constants";
 
 const Skills = () => {
@@ -12,23 +12,26 @@ const Skills = () => {
         MY SKILLS
       </h3>
       <div className="mt-12 grid grid-cols-2 justify-center gap-y-11 md:grid-cols-3 lg:grid-cols-4">
-        {SKILLS.map((skill) => (
-          <div
-            key={skill.name}
-            className="transition-fade cursor-pointer hover:scale-[1.1]"
-          >
-            <div className="flex-center mx-auto h-32 w-32 rounded-full bg-[var(--input-bg)]">
-              <LazyLoadImage
-                alt=""
-                src={skill.image}
-                effect="blur"
-                wrapperClassName="h-20 w-20 relative flex-center"
-                className="h-full w-full object-cover"
-              />
+        {SKILLS.map((skill) => {
+          const id = uuid();
+          return (
+            <div
+              key={id}
+              className="transition-fade cursor-pointer hover:scale-[1.1]"
+            >
+              <div className="flex-center mx-auto h-32 w-32 rounded-full bg-[var(--input-bg)]">
+                <LazyLoadImage
+                  alt=""
+                  src={skill.image}
+                  effect="blur"
+                  wrapperClassName="h-20 w-20 relative flex-center"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <p className="mt-3 text-center text-lg uppercase">{skill.name}</p>
             </div>
-            <p className="mt-3 text-center text-lg uppercase">{skill.name}</p>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );
