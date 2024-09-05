@@ -13,11 +13,11 @@ export default function Home() {
       <div className="absolute left-0 top-0 z-0 hidden h-[200vh] w-[100vw] -translate-x-[78%] -rotate-[16deg] bg-[var(--primary)] xl:block"></div>
       <ContentWrapper className="lg:0 xl:flex xl:gap-16 2xl:gap-24">
         <motion.div
-          animate={{
-            translateX: [-100, 30, 0],
-            opacity: [0.8, 1],
+          whileInView={{
+            translateX: [-20, 10, 0],
+            opacity: [0, 1],
           }}
-          transition={{ ease: "easeOut", duration: 0.5, bounce: 0.7 }}
+          transition={{ ease: "easeOut", duration: 1, bounce: 0.7 }}
           className="flex-center relative mt-10 md:mt-16 lg:w-full xl:mt-0 xl:w-4/12"
         >
           <LazyLoadImage
@@ -30,7 +30,17 @@ export default function Home() {
         </motion.div>
         <div className="flex-center lg:w-full xl:w-8/12">
           <div>
-            <h1 className="relative mt-8 text-center text-3xl font-bold leading-[1.05] md:mt-10 md:text-5xl xl:ml-10 xl:mt-0 xl:text-left xl:text-5xl 2xl:text-6xl 2xl:leading-[1.2]">
+            <motion.h1
+              whileInView={{
+                y: [50, -10, 0],
+                opacity: [0, 1],
+                transition: {
+                  delay: 0.3,
+                  duration: 0.5,
+                },
+              }}
+              className="relative mt-8 text-center text-3xl font-bold leading-[1.05] md:mt-10 md:text-5xl xl:ml-10 xl:mt-0 xl:text-left xl:text-5xl 2xl:text-6xl 2xl:leading-[1.2]"
+            >
               <TypeAnimation
                 sequence={["I'm Cao Dang Tinh", 1000, "Fullstack", 1000]}
                 speed={50}
@@ -40,8 +50,18 @@ export default function Home() {
               />
               <br />
               Web Developer !
-            </h1>
-            <p className="text-md mt-8 text-center font-normal leading-[1.8] lg:px-10 lg:text-justify xl:pl-0 xl:pr-20 xl:text-base xl:leading-[2] 2xl:px-0 2xl:text-lg 2xl:leading-[2]">
+            </motion.h1>
+            <motion.p
+              whileInView={{
+                y: [50, -10, 0],
+                opacity: [0, 1],
+                transition: {
+                  delay: 0.35,
+                  duration: 0.5,
+                },
+              }}
+              className="text-md mt-8 text-center font-normal leading-[1.8] lg:px-10 lg:text-justify xl:pl-0 xl:pr-20 xl:text-base xl:leading-[2] 2xl:px-0 2xl:text-lg 2xl:leading-[2]"
+            >
               Hi, I am currently a third-year student majoring in Computer
               Science at Ton Duc Thang University. After a period of studying at
               the university and working on personal projects, I have gained
@@ -50,22 +70,41 @@ export default function Home() {
               development to further develop my skills. In the future, I plan to
               leverage my abilities to contribute to the growth of the company
               if I am selected to join your team.
-            </p>
+            </motion.p>
             <div className="flex-center mt-4 flex-col justify-center gap-4 pb-24 md:mt-8 md:flex-row md:gap-7 lg:pb-0 xl:justify-start">
-              <div className="hidden md:block">
+              <motion.div
+                whileInView={{
+                  opacity: [0, 1],
+                  x: [-20, 0],
+                  transition: {
+                    delay: 0.5,
+                    duration: 0.5,
+                  },
+                }}
+                className="hidden md:block"
+              >
                 <LinkButton
                   icon={FaArrowRightLong}
                   title="portfolio"
                   href="/portfolio"
                 />
-              </div>
-              <div>
+              </motion.div>
+              <motion.div
+                whileInView={{
+                  opacity: [0, 1],
+                  x: [-20, 0],
+                  transition: {
+                    delay: 0.7,
+                    duration: 0.5,
+                  },
+                }}
+              >
                 <LinkButton
                   icon={FaArrowRightLong}
                   title="about"
                   href="/about"
                 />
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>

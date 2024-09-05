@@ -12,6 +12,15 @@
   ::-webkit-scrollbar {
     display: none;
   }
+
+  .swiper-slide {
+    opacity: 0.4;
+  }
+
+  .mainSwiper .swiper-slide,
+  .swiper-slide-thumb-active {
+    opacity: 1;
+  }
 }
 
 @layer components {
@@ -38,13 +47,4 @@
   --foreground: white;
   --primary: #ffb400;
   --input-bg: #2b2a2a;
-}
-
-.swiper-slide {
-  opacity: 0.4;
-}
-
-.mainSwiper .swiper-slide,
-.swiper-slide-thumb-active {
-  opacity: 1;
 }
