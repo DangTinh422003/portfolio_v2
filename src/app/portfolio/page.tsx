@@ -30,17 +30,8 @@ const PortfolioPage = () => {
       )}
       <div className="grid gap-3 pb-24 lg:grid-cols-2 lg:pb-10 xl:grid-cols-3">
         {PROJECTS.map((pr, i) => {
-          const id = uuid();
           return (
             <motion.div
-              whileInView={{
-                x: [-50, 10, 0],
-                opacity: [0, 1],
-                transition: {
-                  delay: 0.5 + i * 0.1,
-                  duration: 0.5,
-                },
-              }}
               animate={{
                 x: [-50, 10, 0],
                 opacity: [0, 1],
@@ -49,8 +40,16 @@ const PortfolioPage = () => {
                   duration: 0.5,
                 },
               }}
+              whileInView={{
+                x: [-50, 10, 0],
+                opacity: [0, 1],
+                transition: {
+                  delay: 0.5 + i * 0.1,
+                  duration: 0.5,
+                },
+              }}
               className="group relative h-56 w-full cursor-pointer overflow-hidden rounded-md bg-white/10 md:h-64"
-              key={id}
+              key={pr.id}
             >
               <LazyLoadImage
                 alt=""

@@ -38,7 +38,7 @@ const Sidebar = () => {
   const router = useRouter();
 
   return (
-    <ul className="lg:py-auto lg:px-auto fixed bottom-0 left-0 z-10 flex w-full justify-center gap-10 bg-gray px-4 py-3 lg:bottom-auto lg:left-auto lg:right-[30px] lg:top-1/2 lg:w-auto lg:-translate-y-1/2 lg:flex-col lg:justify-start lg:gap-5 lg:bg-transparent lg:p-0">
+    <ul className="lg:py-auto lg:px-auto fixed bottom-0 left-0 z-50 flex w-full justify-center gap-10 bg-gray px-4 py-3 lg:bottom-auto lg:left-auto lg:right-[30px] lg:top-1/2 lg:w-auto lg:-translate-y-1/2 lg:flex-col lg:justify-start lg:gap-5 lg:bg-transparent lg:p-0">
       {SIDEBARS.map((sidebar) => {
         const id = uuid();
         return (
@@ -49,9 +49,9 @@ const Sidebar = () => {
                   pathName === sidebar.href ? "bg-[var(--primary)]" : "bg-gray"
                 } flex-center transition-fade relative z-10 rounded-full text-xl text-white shadow-xl group-hover:bg-[var(--primary)]`}
               >
-                <sidebar.icon></sidebar.icon>
+                <sidebar.icon />
               </div>
-              <p className="flex-center transition-fade invisible absolute right-0 top-0 z-0 hidden h-full rounded-full bg-[var(--primary)] pl-4 pr-8 font-semibold uppercase text-white opacity-0 duration-[400ms] group-hover:visible group-hover:pl-6 group-hover:pr-16 group-hover:opacity-100 lg:flex">
+              <p className="flex-center transition-fade duration-[400ms] invisible absolute right-0 top-0 z-0 hidden h-full rounded-full bg-[var(--primary)] pl-4 pr-8 font-semibold uppercase text-white opacity-0 group-hover:visible group-hover:pl-6 group-hover:pr-16 group-hover:opacity-100 lg:flex">
                 {sidebar.title}
               </p>
             </div>

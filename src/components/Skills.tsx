@@ -3,19 +3,42 @@ import React from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { v4 as uuid } from "uuid";
 import { SKILLS } from "@/common/constants/constants";
+import { motion } from "framer-motion";
 
 const Skills = () => {
   return (
     <div className="mt-10 lg:mt-28">
       <div className="separator mx-auto w-1/3 border-t-[1px] border-solid border-[#424242]"></div>
-      <h3 className="mt-8 text-center text-3xl font-bold uppercase md:mt-14">
+      <motion.h3
+        animate={{
+          y: [50, -10, 0],
+          opacity: [0, 0.8, 1],
+        }}
+        whileInView={{
+          y: [50, -10, 0],
+          opacity: [0, 0.8, 1],
+        }}
+        className="mt-8 text-center text-3xl font-bold uppercase md:mt-14"
+      >
         MY SKILLS
-      </h3>
+      </motion.h3>
       <div className="mt-12 grid grid-cols-2 justify-center gap-y-11 md:grid-cols-3 lg:grid-cols-4">
-        {SKILLS.map((skill) => {
+        {SKILLS.map((skill, i) => {
           const id = uuid();
           return (
-            <div
+            <motion.div
+              animate={{
+                opacity: [0, 1],
+                transition: {
+                  delay: 0.2 + i * 0.1,
+                },
+              }}
+              whileInView={{
+                opacity: [0, 1],
+                transition: {
+                  delay: 0.2 + i * 0.05,
+                },
+              }}
               key={id}
               className="transition-fade cursor-pointer hover:scale-[1.1]"
             >
@@ -29,7 +52,7 @@ const Skills = () => {
                 />
               </div>
               <p className="mt-3 text-center text-lg uppercase">{skill.name}</p>
-            </div>
+            </motion.div>
           );
         })}
       </div>

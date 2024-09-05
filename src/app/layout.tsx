@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
-import AosAnimationProvider from "@/common/providers/AosAnimationProvider";
 import NextThemeProvider from "@/common/providers/NextThemeProvider";
 import "@/common/styles/globals.css";
 import "@/common/styles/reset.css";

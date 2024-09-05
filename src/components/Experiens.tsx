@@ -1,14 +1,26 @@
+"use client";
 import React from "react";
 import { v4 as uuid } from "uuid";
 import { EXPERIENDS } from "@/common/constants/constants";
+import { motion } from "framer-motion";
 
 const Experiens = () => {
   return (
     <div className="mt-10 pb-8 md:mt-28 md:pb-0">
       <div className="separator mx-auto w-1/3 border-t-[1px] border-solid border-[#424242]"></div>
-      <h3 className="mt-8 text-center text-3xl font-bold uppercase md:mt-14">
+      <motion.h3
+        animate={{
+          y: [50, -10, 0],
+          opacity: [0, 0.8, 1],
+        }}
+        whileInView={{
+          y: [50, -10, 0],
+          opacity: [0, 0.8, 1],
+        }}
+        className="mt-8 text-center text-3xl font-bold uppercase md:mt-14"
+      >
         EDUCATION & EXPERIENCE
-      </h3>
+      </motion.h3>
       {/* experiens */}
       <ul className="mt-10 grid grid-cols-1 gap-x-10 gap-y-6 pb-16 md:mt-20 lg:grid-cols-2 lg:gap-y-20">
         {EXPERIENDS.map((exp) => {

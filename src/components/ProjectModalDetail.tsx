@@ -30,7 +30,12 @@ const mainSwiperConfig: SwiperOptions = {
 const subSwiperConfig: SwiperOptions = {
   loop: true,
   spaceBetween: 10,
-  slidesPerView: 3,
+  slidesPerView: 2,
+  breakpoints: {
+    767: {
+      slidesPerView: 3,
+    },
+  },
   watchSlidesProgress: true,
   modules: [Navigation, Thumbs],
 };
@@ -49,10 +54,10 @@ const ProjectModalDetail = ({
       ></div>
       <div className="relative z-10 grid h-screen w-screen grid-cols-2 gap-x-5 overflow-y-scroll rounded-lg bg-[#252525] p-2 pb-4 pt-8 lg:h-auto lg:w-5/6 lg:px-8 2xl:w-4/6">
         <div className="col-span-2 lg:col-span-1">
-          <h2 className="mb-3 flex items-center justify-between border-b-4 border-solid border-[#3b3b3b] text-4xl font-bold uppercase leading-[1.5] text-[var(--primary)]">
-            {project.name}
+          <h2 className="mb-3 flex items-center justify-between border-b-4 border-solid border-[#3b3b3b] text-center text-4xl font-bold uppercase leading-[1.5] text-[var(--primary)] md:text-left">
+            <span className="flex-1">{project.name}</span>
             <IoCloseCircleSharp
-              className="flex-center rounded-full text-4xl text-[var(--primary)] lg:hidden"
+              className="flex-center hidden rounded-full text-4xl text-[var(--primary)] md:block lg:hidden"
               onClick={() => setIsShowModal(false)}
             />
           </h2>
@@ -107,8 +112,12 @@ const ProjectModalDetail = ({
           </div>
         </div>
         <div className="col-span-2 mt-4 lg:col-span-1 lg:mt-0">
-          <h2 className="mb-3 border-b-4 border-solid border-[#3b3b3b] text-4xl font-bold uppercase leading-[1.5] text-[var(--primary)]">
-            details
+          <h2 className="mb-3 flex items-center justify-between border-b-4 border-solid border-[#3b3b3b] text-4xl font-bold uppercase leading-[1.5] text-[var(--primary)]">
+            <span>details</span>
+            <IoCloseCircleSharp
+              className="flex-center rounded-full text-4xl text-[var(--primary)] md:hidden"
+              onClick={() => setIsShowModal(false)}
+            />
           </h2>
           <ul className="text-sm font-light leading-[1.4] xl:text-base">
             <li className="mb-4 leading-[1.7]">{project.desc}</li>
@@ -123,27 +132,40 @@ const ProjectModalDetail = ({
               <span className="opacity-80">Frontend - </span>{" "}
               {project.frontend_tech.join(", ")}
             </li>
-            <li className="mb-2">
-              <span className="opacity-80">Backend - </span>{" "}
-              {project.backend_tech.join(", ")}
-            </li>
+            {project.backend_tech.length > 0 && (
+              <li className="mb-2">
+                <span className="opacity-80">Backend - </span>{" "}
+                {project.backend_tech.join(", ")}
+              </li>
+            )}
             <li className="mb-2">
               <span className="opacity-80">Tags - </span>{" "}
-              {project.tags.join(" / ")}
+              {project.tags.join(", ")}
             </li>
-            <li className="mb-2">
-              <span className="opacity-80">Demo - </span>{" "}
-              <a
-                className="cursor-pointer font-semibold text-[var(--primary)]"
-                href={project.demo}
-                target="_blank"
-              >
-                {project.demo}
-              </a>
-            </li>
-            <li className="mb-2">
-              <span className="opacity-80">Source - </span> {project.source}
-            </li>
+            {project.demo && (
+              <li className="mb-2">
+                <span className="opacity-80">Demo - </span>{" "}
+                <a
+                  className="cursor-pointer font-semibold text-[var(--primary)] underline"
+                  href={project.demo}
+                  target="_blank"
+                >
+                  Click Here
+                </a>
+              </li>
+            )}
+            {project.source && (
+              <li className="mb-2">
+                <span className="opacity-80">Source - </span>{" "}
+                <a
+                  className="cursor-pointer font-semibold text-[var(--primary)] underline"
+                  href={project.source}
+                  target="_blank"
+                >
+                  Click Here
+                </a>
+              </li>
+            )}
           </ul>
         </div>
       </div>

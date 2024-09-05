@@ -123,7 +123,7 @@ export const EXPERIENDS: {
 
 export const PROJECTS: Project[] = [
   {
-    id: "1",
+    id: "0918237091287309812637021683021946196",
     name: "MY PORTFOLIO",
     thumbnail: "/Screenshot from 2024-04-10 01-05-55.png",
     images: [
@@ -144,7 +144,7 @@ export const PROJECTS: Project[] = [
     source: "https://github.com/DangTinh422003/portfolio_v2",
   },
   {
-    id: "5",
+    id: "3-u80123-12873-12983721-98371290-8",
     name: "MOVIX",
     thumbnail: "/Screenshot from 2024-04-10 01-53-56.png",
     images: [
@@ -182,7 +182,7 @@ export const PROJECTS: Project[] = [
     source: "https://github.com/dangtinh422003/movix",
   },
   {
-    id: "2",
+    id: "029813-1089738=-12873=120937=1203721",
     name: "HOTEL BOOKING",
     thumbnail: "/hotel_booking_1.png",
     images: [
@@ -217,7 +217,7 @@ export const PROJECTS: Project[] = [
     source: "https://github.com/DangTinh422003/Booking-hotel",
   },
   {
-    id: "3",
+    id: "-012938-120938-120938-2013",
     name: "TEVILY TRAVEL",
     thumbnail: "/Screenshot from 2024-04-10 01-40-46.png",
     images: [
@@ -245,7 +245,7 @@ export const PROJECTS: Project[] = [
     source: "https://github.com/dangtinh422003/reacttravel_spa",
   },
   {
-    id: "4",
+    id: "0-91283-021839-0210982",
     name: "CHAT APP",
     thumbnail: "/chatapp_1.png",
     images: [
@@ -280,7 +280,7 @@ export const PROJECTS: Project[] = [
     source: "https://github.com/dangtinh422003/chat-app-socket.io",
   },
   {
-    id: "6",
+    id: "312983-=012938-1209318=230912",
     name: "LEAGUE OF LEGENDS",
     thumbnail: "/Screenshot from 2024-04-10 01-59-33.png",
     images: [
@@ -306,7 +306,7 @@ export const PROJECTS: Project[] = [
     tags: ["React", "Scss/Sass module", "UI/UX", "Responsive", "ViteJs"],
   },
   {
-    id: "7",
+    id: "-012937-09123890-=12",
     name: "CodeMeLy landing",
     thumbnail: "/Screenshot from 2024-04-10 02-09-27.png",
     desc: "This is the website introducing our CodeMeLy community, a non-profit organization with the mission of building a dynamic, talented and creative Gen Z IT community with the colors of Gen Z and IT.",

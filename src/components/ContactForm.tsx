@@ -4,6 +4,14 @@ import { IoIosSend } from "react-icons/io";
 import * as Yup from "yup";
 import { Field, Form, Formik, FormikHelpers } from "formik";
 import { toast } from "react-toastify";
+import { motion, Variants } from "framer-motion";
+
+const variants: Variants = {
+  visible: {
+    y: [30, -10, 0],
+    opacity: [0, 1],
+  },
+};
 
 export interface IContactForm {
   username: string;
@@ -46,7 +54,13 @@ export const ContactForm = () => {
       {({ errors, touched }) => (
         <Form>
           <div className="grid grid-cols-2 gap-x-4 gap-y-4 md:gap-y-4 xl:gap-x-6 xl:gap-y-6">
-            <div className="col-span-2 md:col-span-1">
+            <motion.div
+              className="col-span-2 md:col-span-1"
+              variants={variants}
+              whileInView={"visible"}
+              animate={"visible"}
+              transition={{ delay: 0.1 }}
+            >
               <Field
                 type="text"
                 className="h-12 w-full rounded-full border-none bg-[var(--input-bg)] px-10 outline-none outline-[2px] focus:outline focus:outline-[var(--primary)] xl:h-14"
@@ -61,8 +75,14 @@ export const ContactForm = () => {
               ) : (
                 <></>
               )}
-            </div>
-            <div className="col-span-2 md:col-span-1">
+            </motion.div>
+            <motion.div
+              className="col-span-2 md:col-span-1"
+              variants={variants}
+              whileInView={"visible"}
+              animate={"visible"}
+              transition={{ delay: 0.2 }}
+            >
               <Field
                 type="text"
                 className="h-12 w-full rounded-full border-none bg-[var(--input-bg)] px-10 outline-none outline-[2px] focus:outline focus:outline-[var(--primary)] xl:h-14"
@@ -75,8 +95,14 @@ export const ContactForm = () => {
               ) : (
                 <></>
               )}
-            </div>
-            <div className="col-span-2">
+            </motion.div>
+            <motion.div
+              className="col-span-2"
+              variants={variants}
+              whileInView={"visible"}
+              animate={"visible"}
+              transition={{ delay: 0.3 }}
+            >
               <Field
                 type="text"
                 className="h-12 w-full rounded-full border-none bg-[var(--input-bg)] px-10 outline-none outline-[2px] focus:outline focus:outline-[var(--primary)] xl:h-14"
@@ -91,8 +117,14 @@ export const ContactForm = () => {
               ) : (
                 <></>
               )}
-            </div>
-            <div className="col-span-2">
+            </motion.div>
+            <motion.div
+              className="col-span-2"
+              variants={variants}
+              whileInView={"visible"}
+              animate={"visible"}
+              transition={{ delay: 0.4 }}
+            >
               <Field
                 id=""
                 as="textarea"
@@ -108,12 +140,16 @@ export const ContactForm = () => {
               ) : (
                 <></>
               )}
-            </div>
+            </motion.div>
           </div>
           <div className="flex-center mt-6 md:justify-start">
-            <button
+            <motion.button
               type="submit"
               className="transition-fade group relative h-[50px] rounded-full"
+              variants={variants}
+              whileInView={"visible"}
+              animate={"visible"}
+              transition={{ delay: 0.5 }}
             >
               <div className="flex-center transition-fade absolute -left-[1px] -top-[1px] h-[52px] w-[52px] rounded-full bg-[var(--primary)] group-hover:left-[calc(100%-50px)]">
                 <IoIosSend className="text-xl text-white" />
@@ -121,7 +157,7 @@ export const ContactForm = () => {
               <p className="flex-center transition-fade h-full rounded-full pl-16 pr-6 text-lg font-semibold uppercase shadow-2xl outline outline-[2px] outline-[var(--primary)] group-hover:bg-[var(--primary)] group-hover:pl-6 group-hover:pr-16 group-hover:text-white">
                 send message
               </p>
-            </button>
+            </motion.button>
           </div>
         </Form>
       )}
