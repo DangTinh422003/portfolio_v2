@@ -9,8 +9,8 @@ import LinkButton from "@/components/LinkButton";
 
 export default function Home() {
   return (
-    <main className="relative z-40 flex w-screen max-w-[100vw] overflow-hidden lg:h-screen xl:max-h-[100vh]">
-      <div className="absolute left-0 top-0 z-0 hidden h-[200vh] w-[100vw] -translate-x-[78%] -rotate-[16deg] bg-[var(--primary)] xl:block"></div>
+    <main className="relative z-40 flex w-screen max-w-[100vw] overflow-hidden lg:h-screen xl:max-h-screen">
+      <div className="absolute left-0 top-0 z-0 hidden h-[200vh] w-screen -translate-x-[78%] -rotate-[16deg] bg-[var(--primary)] xl:block"></div>
       <ContentWrapper className="lg:0 xl:flex xl:gap-16 2xl:gap-24">
         <motion.div
           whileInView={{
@@ -29,7 +29,7 @@ export default function Home() {
             src="/portfolio_img.png"
             effect="blur"
             wrapperClassName="relative shadow-2xl rounded-full overflow-hidden border-[2px] border-solid border-[var(--primary)] w-[15rem] h-[15rem] md:w-[20rem] md:h-[20rem] xl:w-full xl:h-[35rem] xl:border-0  xl:rounded-3xl"
-            className="h-full w-full object-cover"
+            className="size-full object-cover"
           />
         </motion.div>
         <div className="flex-center lg:w-full xl:w-8/12">
@@ -80,7 +80,7 @@ export default function Home() {
                   duration: 0.5,
                 },
               }}
-              className="text-md mt-8 text-center font-normal leading-[1.8] lg:px-10 lg:text-justify xl:pl-0 xl:pr-20 xl:text-base xl:leading-[2] 2xl:px-0 2xl:text-lg 2xl:leading-[2]"
+              className="text-md mt-8 text-center font-normal leading-[1.8] lg:px-10 lg:text-justify xl:pl-0 xl:pr-20 xl:text-base xl:leading-loose 2xl:px-0 2xl:text-lg 2xl:leading-loose"
             >
               Hi, I am currently a third-year student majoring in Computer
               Science at Ton Duc Thang University. After a period of studying at

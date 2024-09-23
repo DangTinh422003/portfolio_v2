@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write ./src/*",
-    "cy:open": "cypress open"
+    "lint:fix": "eslint ./src --fix",
+    "format": "prettier --write ./src/*"
   },
   "dependencies": {
     "aos": "^2.3.4",
@@ -42,6 +42,7 @@
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.1.4",
+    "eslint-plugin-tailwindcss": "^3.17.4",
     "postcss": "^8",
     "prettier-plugin-tailwindcss": "^0.6.4",
     "tailwindcss": "^3.3.0",

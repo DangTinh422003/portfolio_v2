@@ -15,13 +15,13 @@ const LinkButton = ({
   ...rest
 }: LinkButtonProps) => {
   return (
-    <button className={`inline-block ${className}`} {...rest}>
+    <button className={`inline-block select-none ${className}`} {...rest}>
       <Link href={href}>
         <div className="transition-fade group relative h-[50px] rounded-full">
-          <div className="flex-center transition-fade absolute -left-[1px] -top-[1px] h-[52px] w-[52px] rounded-full bg-[var(--primary)] group-hover:left-[calc(100%-50px)]">
+          <div className="flex-center transition-fade absolute -left-px -top-px size-[52px] rounded-full bg-[var(--primary)] group-hover:left-[calc(100%-50px)]">
             <Icon className="text-xl text-white" />
           </div>
-          <p className="flex-center transition-fade h-full rounded-full pl-16 pr-6 text-lg font-semibold uppercase shadow-2xl outline outline-[2px] outline-[var(--primary)] group-hover:bg-[var(--primary)] group-hover:pl-6 group-hover:pr-16 group-hover:text-white">
+          <p className="flex-center transition-fade h-full rounded-full pl-16 pr-6 text-lg font-semibold uppercase shadow-2xl outline outline-2 outline-[var(--primary)] group-hover:bg-[var(--primary)] group-hover:pl-6 group-hover:pr-16 group-hover:text-white">
             {title}
           </p>
         </div>

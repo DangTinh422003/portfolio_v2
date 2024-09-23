@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const Experiens = () => {
   return (
     <div className="mt-10 pb-8 md:mt-28 md:pb-0">
-      <div className="separator mx-auto w-1/3 border-t-[1px] border-solid border-[#424242]"></div>
+      <div className="separator mx-auto w-1/3 border-t border-solid border-[#424242]"></div>
       <motion.h3
         animate={{
           y: [50, -10, 0],
@@ -27,8 +27,8 @@ const Experiens = () => {
           const id = uuid();
           return (
             <li key={id} className="flex gap-5">
-              <div className="before:absolute-center relative z-0 before:h-full before:w-[1px] before:bg-[#424242]">
-                <div className="flex-center relative z-10 h-10 w-10 rounded-full bg-[var(--primary)] text-xl text-white">
+              <div className="before:absolute-center relative z-0 before:h-full before:w-px before:bg-[#424242]">
+                <div className="flex-center relative z-10 size-10 rounded-full bg-[var(--primary)] text-xl text-white">
                   <exp.icon />
                 </div>
               </div>

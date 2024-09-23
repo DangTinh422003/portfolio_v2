@@ -53,7 +53,7 @@ export const ContactForm = () => {
     >
       {({ errors, touched }) => (
         <Form>
-          <div className="grid grid-cols-2 gap-x-4 gap-y-4 md:gap-y-4 xl:gap-x-6 xl:gap-y-6">
+          <div className="grid grid-cols-2 gap-4 md:gap-y-4 xl:gap-6">
             <motion.div
               className="col-span-2 md:col-span-1"
               variants={variants}
@@ -63,7 +63,7 @@ export const ContactForm = () => {
             >
               <Field
                 type="text"
-                className="h-12 w-full rounded-full border-none bg-[var(--input-bg)] px-10 outline-none outline-[2px] focus:outline focus:outline-[var(--primary)] xl:h-14"
+                className="h-12 w-full rounded-full border-none bg-[var(--input-bg)] px-10 outline-none outline-2 focus:outline focus:outline-[var(--primary)] xl:h-14"
                 placeholder="YOUR NAME"
                 autoComplete={"disable"}
                 name="username"
@@ -85,7 +85,7 @@ export const ContactForm = () => {
             >
               <Field
                 type="text"
-                className="h-12 w-full rounded-full border-none bg-[var(--input-bg)] px-10 outline-none outline-[2px] focus:outline focus:outline-[var(--primary)] xl:h-14"
+                className="h-12 w-full rounded-full border-none bg-[var(--input-bg)] px-10 outline-none outline-2 focus:outline focus:outline-[var(--primary)] xl:h-14"
                 placeholder="YOUR EMAIL"
                 autoComplete={"disable"}
                 name="email"
@@ -105,7 +105,7 @@ export const ContactForm = () => {
             >
               <Field
                 type="text"
-                className="h-12 w-full rounded-full border-none bg-[var(--input-bg)] px-10 outline-none outline-[2px] focus:outline focus:outline-[var(--primary)] xl:h-14"
+                className="h-12 w-full rounded-full border-none bg-[var(--input-bg)] px-10 outline-none outline-2 focus:outline focus:outline-[var(--primary)] xl:h-14"
                 placeholder="YOUR SUBJECT"
                 autoComplete={"disable"}
                 name="subject"
@@ -130,7 +130,7 @@ export const ContactForm = () => {
                 as="textarea"
                 placeholder="YOUR MESSAGE"
                 autoComplete={"disable"}
-                className="h-52 w-full resize-none rounded-3xl border-none bg-[var(--input-bg)] px-10 py-4 outline-none outline-[2px] focus:outline focus:outline-[var(--primary)] xl:h-60"
+                className="h-52 w-full resize-none rounded-3xl border-none bg-[var(--input-bg)] px-10 py-4 outline-none outline-2 focus:outline focus:outline-[var(--primary)] xl:h-60"
                 name="message"
               />
               {errors.message && touched.message ? (
@@ -151,10 +151,10 @@ export const ContactForm = () => {
               animate={"visible"}
               transition={{ delay: 0.5 }}
             >
-              <div className="flex-center transition-fade absolute -left-[1px] -top-[1px] h-[52px] w-[52px] rounded-full bg-[var(--primary)] group-hover:left-[calc(100%-50px)]">
+              <div className="flex-center transition-fade absolute -left-px -top-px size-[52px] rounded-full bg-[var(--primary)] group-hover:left-[calc(100%-50px)]">
                 <IoIosSend className="text-xl text-white" />
               </div>
-              <p className="flex-center transition-fade h-full rounded-full pl-16 pr-6 text-lg font-semibold uppercase shadow-2xl outline outline-[2px] outline-[var(--primary)] group-hover:bg-[var(--primary)] group-hover:pl-6 group-hover:pr-16 group-hover:text-white">
+              <p className="flex-center transition-fade h-full rounded-full pl-16 pr-6 text-lg font-semibold uppercase shadow-2xl outline outline-2 outline-[var(--primary)] group-hover:bg-[var(--primary)] group-hover:pl-6 group-hover:pr-16 group-hover:text-white">
                 send message
               </p>
             </motion.button>

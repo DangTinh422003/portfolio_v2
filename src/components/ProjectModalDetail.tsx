@@ -49,12 +49,12 @@ const ProjectModalDetail = ({
   return (
     <div className="flex-center transition-fade fixed left-0 top-0 z-50 min-h-screen w-screen text-white">
       <div
-        className="absolute left-0 top-0 z-0 h-full w-full bg-black bg-opacity-70"
+        className="absolute left-0 top-0 z-0 size-full bg-black bg-opacity-70"
         onClick={() => setIsShowModal(false)}
       ></div>
       <div className="relative z-10 grid h-screen w-screen grid-cols-2 gap-x-5 overflow-y-scroll rounded-lg bg-[#252525] p-2 pb-4 pt-8 lg:h-auto lg:w-5/6 lg:px-8 2xl:w-4/6">
         <div className="col-span-2 lg:col-span-1">
-          <h2 className="mb-3 flex items-center justify-between border-b-4 border-solid border-[#3b3b3b] text-center text-4xl font-bold uppercase leading-[1.5] text-[var(--primary)] md:text-left">
+          <h2 className="mb-3 flex items-center justify-between border-b-4 border-solid border-[#3b3b3b] text-center text-4xl font-bold uppercase leading-normal text-[var(--primary)] md:text-left">
             <span className="flex-1">{project.name}</span>
             <IoCloseCircleSharp
               className="flex-center hidden rounded-full text-4xl text-[var(--primary)] md:block lg:hidden"
@@ -83,7 +83,7 @@ const ProjectModalDetail = ({
                           src={img}
                           effect="blur"
                           wrapperClassName="w-full h-52 md:h-72 cursor-pointer select-none"
-                          className="h-full w-full object-cover"
+                          className="size-full object-cover"
                         />
                       </SwiperSlide>
                     </motion.div>
@@ -102,7 +102,7 @@ const ProjectModalDetail = ({
                         src={img}
                         effect="blur"
                         wrapperClassName="w-full h-24 md:h-28 cursor-pointer select-none hover:opacity-80"
-                        className="h-full w-full object-cover"
+                        className="size-full object-cover"
                       />
                     </SwiperSlide>
                   );
@@ -112,7 +112,7 @@ const ProjectModalDetail = ({
           </div>
         </div>
         <div className="col-span-2 mt-4 lg:col-span-1 lg:mt-0">
-          <h2 className="mb-3 flex items-center justify-between border-b-4 border-solid border-[#3b3b3b] text-4xl font-bold uppercase leading-[1.5] text-[var(--primary)]">
+          <h2 className="mb-3 flex items-center justify-between border-b-4 border-solid border-[#3b3b3b] text-4xl font-bold uppercase leading-normal text-[var(--primary)]">
             <span>details</span>
             <IoCloseCircleSharp
               className="flex-center rounded-full text-4xl text-[var(--primary)] md:hidden"

@@ -172,7 +172,7 @@ const AboutInfoSection = () => {
 
 const Box = ({ count, label }: IInfo) => {
   return (
-    <div className="transition-fade h-full min-h-52 w-full cursor-pointer rounded-xl border border-solid border-[#424242]/40 p-9 shadow-xl hover:scale-[1.03]">
+    <div className="transition-fade size-full min-h-52 cursor-pointer rounded-xl border border-solid border-[#424242]/40 p-9 shadow-xl hover:scale-[1.03]">
       <p className="text-6xl font-bold text-[var(--primary)]">
         <span>{count}</span>
         <span className="relative -top-5 ml-1 text-5xl">+</span>

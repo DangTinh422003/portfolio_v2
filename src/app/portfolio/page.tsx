@@ -56,10 +56,10 @@ const PortfolioPage = () => {
                 src={pr.thumbnail}
                 effect="blur"
                 wrapperClassName="relative h-full w-full"
-                className="h-full w-full bg-white/10 object-cover"
+                className="size-full bg-white/10 object-cover"
               />
               <div
-                className="flex-center transition-fade invisible absolute left-0 top-0 h-full w-full bg-black bg-opacity-80 opacity-0 group-hover:visible group-hover:opacity-100"
+                className="flex-center transition-fade invisible absolute left-0 top-0 size-full bg-black bg-opacity-80 opacity-0 group-hover:visible group-hover:opacity-100"
                 onClick={() => handleActiveProject(pr)}
               >
                 <p className="text-center text-3xl font-bold uppercase text-white">

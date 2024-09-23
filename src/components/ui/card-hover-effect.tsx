@@ -28,14 +28,14 @@ export const HoverEffect = ({
             transition: { duration: 0.5, delay: 0.3 + idx * 0.1 },
           }}
           key={idx}
-          className="group relative block h-full w-full p-2"
+          className="group relative block size-full p-2"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-0 block h-full w-full rounded-lg bg-[var(--primary)] bg-opacity-50"
+                className="absolute inset-0 block size-full rounded-lg bg-[var(--primary)] bg-opacity-50"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{

@@ -26,7 +26,7 @@ const ContactInfoGroup = () => {
         DON&apos;T BE SHY !
       </motion.h3>
       <motion.p
-        className="mt-4 leading-[1.5]"
+        className="mt-4 leading-normal"
         variants={variants}
         whileInView={"visible"}
         animate={"visible"}
