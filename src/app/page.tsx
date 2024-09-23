@@ -10,8 +10,8 @@ import LinkButton from "@/components/LinkButton";
 export default function Home() {
   return (
     <main className="relative z-40 flex w-screen max-w-[100vw] overflow-hidden lg:h-screen xl:max-h-screen">
-      <div className="absolute left-0 top-0 z-0 hidden h-[200vh] w-screen -translate-x-[78%] -rotate-[16deg] bg-[var(--primary)] xl:block"></div>
-      <ContentWrapper className="lg:0 xl:flex xl:gap-16 2xl:gap-24">
+      <div className="absolute left-0 top-0 z-0 hidden h-[200vh] w-screen translate-x-[-78%] rotate-[-16deg] bg-[var(--primary)] xl:block"></div>
+      <ContentWrapper className="xl:flex xl:gap-16 2xl:gap-24">
         <motion.div
           whileInView={{
             translateX: [-20, 10, 0],
