@@ -7,6 +7,7 @@ import { v4 } from "uuid";
 import { HoverEffect } from "./ui/card-hover-effect";
 import { motion } from "framer-motion";
 import { FaCopy } from "react-icons/fa6";
+import prisma from "@/lib/db";
 
 export interface IInfo {
   count: number;

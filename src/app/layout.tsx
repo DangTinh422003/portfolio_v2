@@ -32,7 +32,7 @@ export default function RootLayout({
         <NextThemeProvider>
           <Sidebar />
           <ToggleTheme />
-          <main className="h-screen w-screen max-w-screen-md overflow-x-hidden">
+          <main className="h-screen w-screen overflow-x-hidden">
             {children}
           </main>
         </NextThemeProvider>

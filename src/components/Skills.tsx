@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 const Skills = () => {
   return (
     <div className="mt-10 lg:mt-28">
-      <div className="separator mx-auto w-1/3 border-t border-solid border-[#424242]"></div>
+      <div className="mx-auto w-1/3 border-t border-solid border-[#424242]"></div>
       <motion.h3
         animate={{
           y: [50, -10, 0],

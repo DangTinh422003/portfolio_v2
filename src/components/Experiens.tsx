@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const Experiens = () => {
   return (
     <div className="mt-10 pb-8 md:mt-28 md:pb-0">
-      <div className="separator mx-auto w-1/3 border-t border-solid border-[#424242]"></div>
+      <div className="mx-auto w-1/3 border-t border-solid border-[#424242]"></div>
       <motion.h3
         animate={{
           y: [50, -10, 0],
