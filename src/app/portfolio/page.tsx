@@ -7,7 +7,6 @@ import { PROJECTS } from "@/common/constants/constants";
 import ContentWrapper from "@/components/ContentWrapper";
 import ProjectModalDetail from "@/components/ProjectModalDetail";
 import { motion } from "framer-motion";
-import { v4 as uuid } from "uuid";
 
 const PortfolioPage = () => {
   const [isShowModal, setIsShowModal] = React.useState(false);
@@ -58,14 +57,14 @@ const PortfolioPage = () => {
                 wrapperClassName="relative h-full w-full"
                 className="size-full bg-white/10 object-cover"
               />
-              <div
-                className="flex-center transition-fade invisible absolute left-0 top-0 size-full bg-black bg-opacity-80 opacity-0 group-hover:visible group-hover:opacity-100"
+              <button
+                className="flex-center transition-fade invisible absolute left-0 top-0 size-full bg-black/80 opacity-0 group-hover:visible group-hover:opacity-100"
                 onClick={() => handleActiveProject(pr)}
               >
                 <p className="text-center text-3xl font-bold uppercase text-white">
                   {pr.name}
                 </p>
-              </div>
+              </button>
             </motion.div>
           );
         })}

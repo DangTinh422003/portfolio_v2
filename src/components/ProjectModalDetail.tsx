@@ -130,12 +130,12 @@ const ProjectModalDetail = ({
             </li>
             <li className="mb-2">
               <span className="opacity-80">Frontend - </span>{" "}
-              {project.frontend_tech.join(", ")}
+              {project.frontend_techs.join(", ")}
             </li>
-            {project.backend_tech.length > 0 && (
+            {project.backend_techs.length > 0 && (
               <li className="mb-2">
                 <span className="opacity-80">Backend - </span>{" "}
-                {project.backend_tech.join(", ")}
+                {project.backend_techs.join(", ")}
               </li>
             )}
             <li className="mb-2">

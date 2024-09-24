@@ -136,8 +136,8 @@ export const PROJECTS: Project[] = [
     ],
     desc: "Project Description Of Personal Information, Including Skills And Programming Languages. Experiences And Jobs During The Time As A Student, Including Information About Other Personal Projects. Finally, Include Contact Information.",
     role: "Frontend Developer",
-    frontend_tech: ["NextJs", "Tailwindcss", "Formik", "Yup"],
-    backend_tech: [],
+    frontend_techs: ["NextJs", "Tailwindcss", "Formik", "Yup"],
+    backend_techs: [],
     created_at: "Apr 19, 2023",
     tags: ["React", "Scss/Sass module", "UI/UX", "Responsive"],
     demo: "https://cdt-portfolio.id.vn",
@@ -159,14 +159,14 @@ export const PROJECTS: Project[] = [
     ],
     desc: "A small website built on open APIs for the purpose of introducing and searching for movies.",
     role: "Frontend Developer",
-    frontend_tech: [
+    frontend_techs: [
       "ReactJs",
       "Css",
       "Scss/Sass",
       "Bootstrap",
       "Redux-Toolkit",
     ],
-    backend_tech: [],
+    backend_techs: [],
     created_at: " Jul 6, 2023",
     tags: [
       "Html",
@@ -200,8 +200,8 @@ export const PROJECTS: Project[] = [
     ],
     desc: "The Final Assignment For The NodeJS Course Was A Group Project On The Topic Of A Hotel Booking System And An Admin Website For Managing The Hotel With A Focus On Server-Side Rendering.",
     role: "Frontend, Backend Developer",
-    frontend_tech: ["Html", "Css", "Handlebars", "Scss/Sass", "Bootstrap"],
-    backend_tech: ["NodeJs", "ExpressJs", "MongoDB", "JWT"],
+    frontend_techs: ["Html", "Css", "Handlebars", "Scss/Sass", "Bootstrap"],
+    backend_techs: ["NodeJs", "ExpressJs", "MongoDB", "JWT"],
     created_at: "Apr 19, 2023",
     tags: [
       "Html",
@@ -229,8 +229,8 @@ export const PROJECTS: Project[] = [
     ],
     desc: "The First ReactJS Project That Was Both Studied And Worked On Was A Midterm Assignment On The Topic Of Single-Page-Application In The Basic Web Programming Course.",
     role: "Frontend Developer",
-    frontend_tech: ["Html", "Css", "Bootstrap"],
-    backend_tech: [],
+    frontend_techs: ["Html", "Css", "Bootstrap"],
+    backend_techs: [],
     created_at: "Nov 21, 2022",
     tags: [
       "Html",
@@ -256,14 +256,14 @@ export const PROJECTS: Project[] = [
     ],
     desc: "The Midterm Assignment For The NodeJs Course Involved Using The Socket.Io Library And The Expressjs Framework, Along With The Handlebars View Engine, To Build A Real-Time Chat Application.",
     role: "Frontend, Backend Developer",
-    frontend_tech: [
+    frontend_techs: [
       "Html",
       "Css",
       "Scss/Sass module",
       "Handlebars",
       "Bootstrap",
     ],
-    backend_tech: ["NodeJs", "ExpressJs", "Socket.io", "MongoDB", "Mongoose"],
+    backend_techs: ["NodeJs", "ExpressJs", "Socket.io", "MongoDB", "Mongoose"],
     created_at: "Mar 22, 2023",
     tags: [
       "Html",
@@ -292,14 +292,14 @@ export const PROJECTS: Project[] = [
     ],
     desc: "A website that introduces a famous game called League of Legends, built with ReactJs and the ViteJs tool.",
     role: "Frontend Developer",
-    frontend_tech: [
+    frontend_techs: [
       "ReactJs",
       "Scss/Sass",
       "Hover-effect",
       "SwiperJs",
       "ViteJs",
     ],
-    backend_tech: [],
+    backend_techs: [],
     created_at: "Mar 25, 2024",
     demo: "https://games-landing-page.vercel.app",
     source: "https://github.com/DangTinh422003/games-landing-page",
@@ -311,8 +311,8 @@ export const PROJECTS: Project[] = [
     thumbnail: "/Screenshot from 2024-04-10 02-09-27.png",
     desc: "This is the website introducing our CodeMeLy community, a non-profit organization with the mission of building a dynamic, talented and creative Gen Z IT community with the colors of Gen Z and IT.",
     created_at: "Aug 13, 2023",
-    backend_tech: [],
-    frontend_tech: [
+    backend_techs: [],
+    frontend_techs: [
       "NextJs",
       "Styled-components",
       "SwiperJs",

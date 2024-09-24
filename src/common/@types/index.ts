@@ -6,8 +6,8 @@ export interface Project {
   desc: string;
   created_at: string;
   role: string;
-  frontend_tech: string[];
-  backend_tech: string[];
+  frontend_techs: string[];
+  backend_techs: string[];
   tags: string[];
   demo?: string;
   source?: string;
