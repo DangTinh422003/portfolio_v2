@@ -33,6 +33,7 @@
     "yup": "^1.4.0"
   },
   "devDependencies": {
+    "@prisma/client": "^5.20.0",
     "@types/aos": "^3.0.7",
     "@types/node": "^20",
     "@types/react": "^18",
@@ -45,6 +46,7 @@
     "eslint-plugin-tailwindcss": "^3.17.4",
     "postcss": "^8",
     "prettier-plugin-tailwindcss": "^0.6.4",
+    "prisma": "^5.19.1",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
   }
