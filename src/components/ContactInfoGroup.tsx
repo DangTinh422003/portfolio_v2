@@ -43,11 +43,11 @@ const ContactInfoGroup = () => {
           animate={"visible"}
           transition={{ delay: 0.3 }}
         >
-          <div className="icon flex-center text-2xl text-[var(--primary)] xl:text-4xl">
+          <div className="flex-center text-2xl text-[var(--primary)] xl:text-4xl">
             <FaLocationDot />
           </div>
           <div>
-            <p className="text-md uppercase">address</p>
+            <p className="font-medium uppercase">address</p>
             <p className="xl:text-lg">District 7, Ho Chi Minh City</p>
           </div>
         </motion.li>
@@ -58,11 +58,11 @@ const ContactInfoGroup = () => {
           animate={"visible"}
           transition={{ delay: 0.35 }}
         >
-          <div className="icon flex-center text-2xl text-[var(--primary)] xl:text-4xl">
+          <div className="flex-center text-2xl text-[var(--primary)] xl:text-4xl">
             <IoMdMail />
           </div>
           <div>
-            <p className="text-md uppercase">EMAIL</p>
+            <p className="font-medium uppercase">EMAIL</p>
             <p className="xl:text-lg">caodangtinhxxx03@gmail.com</p>
           </div>
         </motion.li>
@@ -73,11 +73,11 @@ const ContactInfoGroup = () => {
           animate={"visible"}
           transition={{ delay: 0.4 }}
         >
-          <div className="icon flex-center text-2xl text-[var(--primary)] xl:text-4xl">
+          <div className="flex-center text-2xl text-[var(--primary)] xl:text-4xl">
             <FaPhoneAlt />
           </div>
           <div>
-            <p className="text-md uppercase">PHONE</p>
+            <p className="font-medium uppercase">PHONE</p>
             <p className="xl:text-lg">0862040xxx</p>
           </div>
         </motion.li>

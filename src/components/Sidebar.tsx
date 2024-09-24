@@ -38,7 +38,7 @@ const Sidebar = () => {
   const router = useRouter();
 
   return (
-    <ul className="lg:py-auto lg:px-auto fixed bottom-0 left-0 z-50 flex w-full justify-center gap-10 bg-gray px-4 py-3 lg:bottom-auto lg:left-auto lg:right-[30px] lg:top-1/2 lg:w-auto lg:-translate-y-1/2 lg:flex-col lg:justify-start lg:gap-5 lg:bg-transparent lg:p-0">
+    <ul className="fixed bottom-0 left-0 z-50 flex w-full justify-center gap-10 bg-gray px-4 py-3 lg:bottom-auto lg:left-auto lg:right-[30px] lg:top-1/2 lg:w-auto lg:-translate-y-1/2 lg:flex-col lg:justify-start lg:gap-5 lg:bg-transparent lg:p-0">
       {SIDEBARS.map((sidebar) => {
         const id = uuid();
         return (

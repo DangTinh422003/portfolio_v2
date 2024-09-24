@@ -48,10 +48,10 @@ const ProjectModalDetail = ({
 
   return (
     <div className="flex-center transition-fade fixed left-0 top-0 z-50 min-h-screen w-screen text-white">
-      <div
-        className="absolute left-0 top-0 z-0 size-full bg-black bg-opacity-70"
+      <button
+        className="absolute left-0 top-0 z-0 size-full bg-black/70"
         onClick={() => setIsShowModal(false)}
-      ></div>
+      ></button>
       <div className="relative z-10 grid h-screen w-screen grid-cols-2 gap-x-5 overflow-y-scroll rounded-lg bg-[#252525] p-2 pb-4 pt-8 lg:h-auto lg:w-5/6 lg:px-8 2xl:w-4/6">
         <div className="col-span-2 lg:col-span-1">
           <h2 className="mb-3 flex items-center justify-between border-b-4 border-solid border-[#3b3b3b] text-center text-4xl font-bold uppercase leading-normal text-[var(--primary)] md:text-left">
