@@ -80,7 +80,7 @@ export default function Home() {
                   duration: 0.5,
                 },
               }}
-              className="text-md mt-8 text-center font-normal leading-[1.8] lg:px-10 lg:text-justify xl:pl-0 xl:pr-20 xl:text-base xl:leading-loose 2xl:px-0 2xl:text-lg 2xl:leading-loose"
+              className="mt-8 text-center font-normal leading-[1.8] lg:px-10 lg:text-justify xl:pl-0 xl:pr-20 xl:text-base xl:leading-loose 2xl:px-0 2xl:text-lg 2xl:leading-loose"
             >
               Hi, I am currently a third-year student majoring in Computer
               Science at Ton Duc Thang University. After a period of studying at

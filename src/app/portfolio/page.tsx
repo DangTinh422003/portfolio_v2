@@ -78,7 +78,7 @@ const PortfolioPage = () => {
               className="group relative flex h-56 w-full animate-pulse cursor-pointer items-center justify-center overflow-hidden rounded-md border-blue-300 shadow md:h-64"
               key={i}
             >
-              <div className="h-full w-full bg-gray" />
+              <div className="size-full bg-gray" />
             </div>
           ))}
         </div>
