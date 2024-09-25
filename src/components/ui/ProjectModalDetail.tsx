@@ -13,8 +13,6 @@ import { SwiperOptions } from "swiper/types";
 import { motion } from "framer-motion";
 import { v4 as uuid } from "uuid";
 
-import { Project } from "@/common/@types";
-
 interface ProjectModalDetailProps {
   setIsShowModal: (value: boolean) => void;
   project: Project;

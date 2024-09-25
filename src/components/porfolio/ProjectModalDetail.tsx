@@ -12,8 +12,8 @@ import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
 import { SwiperOptions } from "swiper/types";
 import { motion } from "framer-motion";
 import { v4 as uuid } from "uuid";
-
-import { Project } from "@/common/@types";
+import { Project } from "@prisma/client";
+import dayjs from "dayjs";
 
 interface ProjectModalDetailProps {
   setIsShowModal: (value: boolean) => void;
@@ -123,7 +123,7 @@ const ProjectModalDetail = ({
             <li className="mb-4 leading-[1.7]">{project.desc}</li>
             <li className="mb-2">
               <span className="opacity-80">Created - </span>
-              {project.created_at}
+              {dayjs(project.created_at).format("DD MMMM, YYYY")}
             </li>
             <li className="mb-2">
               <span className="opacity-80">Role - </span> {project.role}

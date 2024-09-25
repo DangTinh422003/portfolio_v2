@@ -10,7 +10,7 @@ generator client {
 
 // Data model
 model Project {
-  id             Int      @id @default(autoincrement())
+  id             String   @id @default(uuid())
   name           String
   thumbnail      String
   images         String[]
@@ -22,4 +22,13 @@ model Project {
   demo           String?
   source         String?
   created_at     DateTime @default(now())
+}
+
+model User {
+  id         String   @id @default(uuid())
+  username   String
+  email      String   @unique
+  password   String
+  isActive   Boolean  @default(false)
+  created_at DateTime @default(now())
 }
