@@ -4,10 +4,9 @@ import { FaArrowDown } from "react-icons/fa";
 
 import LinkButton from "./LinkButton";
 import { v4 } from "uuid";
-import { HoverEffect } from "./ui/card-hover-effect";
+import { HoverEffect } from "../ui/card-hover-effect";
 import { motion } from "framer-motion";
 import { FaCopy } from "react-icons/fa6";
-import prisma from "@/common/lib/db";
 
 export interface IInfo {
   count: number;
@@ -67,8 +66,6 @@ const PERSONAL_INFOS = [
 const AboutInfoSection = () => {
   return (
     <div className="grid grid-cols-1 xl:grid-cols-2">
-      {/* LEFT COL */}
-
       <div>
         <motion.h3
           animate={{
@@ -157,7 +154,6 @@ const AboutInfoSection = () => {
           />
         </motion.div>
       </div>
-      {/* RIGHT COL */}
       <div>
         <HoverEffect
           items={INFOS.map((info) => {

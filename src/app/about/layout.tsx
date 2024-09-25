@@ -1,6 +1,6 @@
 import React, { PropsWithChildren } from "react";
 
-import PageHeader from "@/components/PageHeader";
+import PageHeader from "@/components/porfolio/PageHeader";
 
 const layout = ({ children }: PropsWithChildren) => {
   return (

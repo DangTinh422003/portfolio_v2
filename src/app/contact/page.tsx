@@ -1,6 +1,6 @@
 "use client";
-import { ContactForm } from "@/components/ContactForm";
-import ContactInfoGroup from "@/components/ContactInfoGroup";
+import { ContactForm } from "@/components/porfolio/ContactForm";
+import ContactInfoGroup from "@/components/porfolio/ContactInfoGroup";
 import ContentWrapper from "@/components/ContentWrapper";
 
 const ContactPage = () => {

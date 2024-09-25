@@ -5,7 +5,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Project } from "@/common/@types";
 import { PROJECTS } from "@/common/constants/constants";
 import ContentWrapper from "@/components/ContentWrapper";
-import ProjectModalDetail from "@/components/ProjectModalDetail";
+import ProjectModalDetail from "@/components/porfolio/ProjectModalDetail";
 import { motion } from "framer-motion";
 
 const PortfolioPage = () => {

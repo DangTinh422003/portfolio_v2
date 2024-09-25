@@ -5,7 +5,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import { TypeAnimation } from "react-type-animation";
 
 import ContentWrapper from "@/components/ContentWrapper";
-import LinkButton from "@/components/LinkButton";
+import LinkButton from "@/components/porfolio/LinkButton";
 
 export default function Home() {
   return (
