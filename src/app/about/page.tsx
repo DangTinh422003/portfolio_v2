@@ -1,9 +1,7 @@
-import React from "react";
-
-import AboutInfoSection from "@/components/AboutInfoSection";
-import ContentWrapper from "@/components/ContentWrapper";
-import Experiens from "@/components/Experiens";
-import Skills from "@/components/Skills";
+import AboutInfoSection from '@/components/AboutInfoSection'
+import ContentWrapper from '@/components/ContentWrapper'
+import Experiens from '@/components/Experiens'
+import Skills from '@/components/Skills'
 
 const About = () => {
   return (
@@ -12,7 +10,7 @@ const About = () => {
       <Skills />
       <Experiens />
     </ContentWrapper>
-  );
-};
+  )
+}
 
-export default About;
+export default About

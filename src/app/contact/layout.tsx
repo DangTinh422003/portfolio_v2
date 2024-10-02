@@ -1,5 +1,6 @@
-import PageHeader from "@/components/PageHeader";
-import React, { PropsWithChildren } from "react";
+import { type PropsWithChildren } from 'react'
+
+import PageHeader from '@/components/PageHeader'
 
 const layout = ({ children }: PropsWithChildren) => {
   return (
@@ -7,13 +8,13 @@ const layout = ({ children }: PropsWithChildren) => {
       <PageHeader
         subTitle="contact"
         mainTitle={{
-          normal: "get in",
-          strong: "touch",
+          normal: 'get in',
+          strong: 'touch',
         }}
       />
       {children}
     </div>
-  );
-};
+  )
+}
 
-export default layout;
+export default layout

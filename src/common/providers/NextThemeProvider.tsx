@@ -1,7 +1,8 @@
-import { ThemeProvider } from "next-themes";
-import React, { PropsWithChildren } from "react";
-import { Bounce, ToastContainer, ToastContainerProps } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
+import { ThemeProvider } from "next-themes";
+import React, { type PropsWithChildren } from "react";
+import { Bounce, ToastContainer, type ToastContainerProps } from "react-toastify";
 
 const toastConfig: ToastContainerProps = {
   position: "top-left",

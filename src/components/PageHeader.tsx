@@ -1,5 +1,5 @@
 "use client";
-import { motion, Variants } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 
 interface PageHeaderProps {
   subTitle: string;
@@ -24,13 +24,23 @@ const PageHeader = ({ mainTitle, subTitle, ...rest }: PageHeaderProps) => {
         variants={headerVariants}
         whileInView={"visible"}
         animate={"visible"}
-        className="relative mx-auto inline-block text-center font-[900] uppercase"
+        className={`
+          relative mx-auto inline-block text-center font-[900] uppercase
+        `}
       >
-        <motion.h1 className="relative z-10 py-10 text-4xl md:py-24 md:text-6xl">
+        <motion.h1 className={`
+          relative z-10 py-10 text-4xl
+
+          md:py-24 md:text-6xl
+        `}>
           {mainTitle.normal}{" "}
           <span className="text-[var(--primary)]">{mainTitle.strong}</span>
         </motion.h1>
-        <motion.p className="absolute-center z-0 text-6xl opacity-10 md:text-9xl">
+        <motion.p className={`
+          absolute-center z-0 text-6xl opacity-10
+
+          md:text-9xl
+        `}>
           {subTitle}
         </motion.p>
       </motion.div>

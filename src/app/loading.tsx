@@ -1,5 +1,4 @@
-import React from "react";
-import { CgSpinner } from "react-icons/cg";
+import { CgSpinner } from 'react-icons/cg'
 
 const loading = () => {
   return (
@@ -8,7 +7,7 @@ const loading = () => {
         <CgSpinner className="text-4xl" />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default loading;
+export default loading

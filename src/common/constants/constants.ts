@@ -1,10 +1,10 @@
-import { FC } from "react";
+import { type FC } from "react";
 import { FaBookOpen, FaCode } from "react-icons/fa6";
 import { IoSchool } from "react-icons/io5";
 import { MdGeneratingTokens } from "react-icons/md";
 import { RiComputerFill } from "react-icons/ri";
 
-import { Project } from "../@types";
+import { type Project } from "../@types";
 
 export enum DeviceMinSize {
   DESKTOP = 1200,

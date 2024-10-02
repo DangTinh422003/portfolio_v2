@@ -1,12 +1,12 @@
 "use client";
-import React, { ReactNode } from "react";
+import { motion } from "framer-motion";
+import React, { type ReactNode } from "react";
 import { FaArrowDown } from "react-icons/fa";
+import { FaCopy } from "react-icons/fa6";
+import { v4 } from "uuid";
 
 import LinkButton from "./LinkButton";
-import { v4 } from "uuid";
 import { HoverEffect } from "./ui/card-hover-effect";
-import { motion } from "framer-motion";
-import { FaCopy } from "react-icons/fa6";
 
 export interface IInfo {
   count: number;
@@ -65,7 +65,11 @@ const PERSONAL_INFOS = [
 
 const AboutInfoSection = () => {
   return (
-    <div className="grid grid-cols-1 xl:grid-cols-2">
+    <div className={`
+      grid grid-cols-1
+
+      xl:grid-cols-2
+    `}>
       {/* LEFT COL */}
 
       <div>
@@ -84,7 +88,11 @@ const AboutInfoSection = () => {
         >
           PERSONAL INFOS
         </motion.h3>
-        <ul className="grid md:grid-cols-2">
+        <ul className={`
+          grid
+
+          md:grid-cols-2
+        `}>
           <li key={v4()} className="mt-6 flex items-center gap-2">
             <span className="opacity-70">Email:</span>{" "}
             <div className="flex gap-2">
@@ -95,7 +103,11 @@ const AboutInfoSection = () => {
                 Click Here
               </a>
               <FaCopy
-                className="cursor-pointer hover:opacity-80"
+                className={`
+                  cursor-pointer
+
+                  hover:opacity-80
+                `}
                 onClick={() => {
                   navigator.clipboard.writeText(
                     "caodangtinh04022003@gmail.com",
@@ -147,7 +159,11 @@ const AboutInfoSection = () => {
               duration: 0.5,
             },
           }}
-          className="mt-5 lg:mt-10"
+          className={`
+            mt-5
+
+            lg:mt-10
+          `}
         >
           <LinkButton
             href="/CV_Cao_Dang_Tinh.pdf"
@@ -172,12 +188,22 @@ const AboutInfoSection = () => {
 
 const Box = ({ count, label }: IInfo) => {
   return (
-    <div className="transition-fade h-full min-h-52 w-full cursor-pointer rounded-xl border border-solid border-[#424242]/40 p-9 shadow-xl hover:scale-[1.03]">
+    <div className={`
+      transition-fade size-full min-h-52 cursor-pointer rounded-xl border
+      border-solid border-[#424242]/40 p-9 shadow-xl
+
+      hover:scale-[1.03]
+    `}>
       <p className="text-6xl font-bold text-[var(--primary)]">
         <span>{count}</span>
         <span className="relative -top-5 ml-1 text-5xl">+</span>
       </p>
-      <div className="before:absolute-center relative ml-12 mt-5 text-wrap text-xl font-normal uppercase before:-left-10 before:h-1 before:w-8 before:rounded-full before:bg-[#424242] before:content-['']">
+      <div className={`
+        relative ml-12 mt-5 text-wrap text-xl font-normal uppercase
+
+        before:absolute-center before:-left-10 before:h-1 before:w-8
+        before:rounded-full before:bg-[#424242] before:content-['']
+      `}>
         {label}
       </div>
     </div>

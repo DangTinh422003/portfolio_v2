@@ -1,13 +1,13 @@
 "use client";
+import { motion } from "framer-motion";
 import React from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { v4 as uuid } from "uuid";
 
-import { Project } from "@/common/@types";
+import { type Project } from "@/common/@types";
 import { PROJECTS } from "@/common/constants/constants";
 import ContentWrapper from "@/components/ContentWrapper";
 import ProjectModalDetail from "@/components/ProjectModalDetail";
-import { motion } from "framer-motion";
-import { v4 as uuid } from "uuid";
 
 const PortfolioPage = () => {
   const [isShowModal, setIsShowModal] = React.useState(false);
@@ -28,7 +28,13 @@ const PortfolioPage = () => {
       ) : (
         <></>
       )}
-      <div className="grid gap-3 pb-24 lg:grid-cols-2 lg:pb-10 xl:grid-cols-3">
+      <div className={`
+        grid gap-3 pb-24
+
+        lg:grid-cols-2 lg:pb-10
+
+        xl:grid-cols-3
+      `}>
         {PROJECTS.map((pr, i) => {
           return (
             <motion.div
@@ -48,7 +54,12 @@ const PortfolioPage = () => {
                   duration: 0.5,
                 },
               }}
-              className="group relative h-56 w-full cursor-pointer overflow-hidden rounded-md bg-white/10 md:h-64"
+              className={`
+                group relative h-56 w-full cursor-pointer overflow-hidden
+                rounded-md bg-white/10
+
+                md:h-64
+              `}
               key={pr.id}
             >
               <LazyLoadImage
@@ -56,13 +67,20 @@ const PortfolioPage = () => {
                 src={pr.thumbnail}
                 effect="blur"
                 wrapperClassName="relative h-full w-full"
-                className="h-full w-full bg-white/10 object-cover"
+                className="size-full bg-white/10 object-cover"
               />
               <div
-                className="flex-center transition-fade invisible absolute left-0 top-0 h-full w-full bg-black bg-opacity-80 opacity-0 group-hover:visible group-hover:opacity-100"
+                className={`
+                  flex-center transition-fade invisible absolute left-0 top-0
+                  size-full bg-black bg-opacity-80 opacity-0
+
+                  group-hover:visible group-hover:opacity-100
+                `}
                 onClick={() => handleActiveProject(pr)}
               >
-                <p className="text-center text-3xl font-bold uppercase text-white">
+                <p className={`
+                  text-center text-3xl font-bold uppercase text-white
+                `}>
                   {pr.name}
                 </p>
               </div>

@@ -1,10 +1,9 @@
 "use client";
-import { Variants } from "framer-motion";
+import { motion,type Variants  } from "framer-motion";
 import React from "react";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
-import { motion } from "framer-motion";
 
 const variants: Variants = {
   visible: {
@@ -26,7 +25,7 @@ const ContactInfoGroup = () => {
         DON&apos;T BE SHY !
       </motion.h3>
       <motion.p
-        className="mt-4 leading-[1.5]"
+        className="mt-4 leading-normal"
         variants={variants}
         whileInView={"visible"}
         animate={"visible"}
@@ -37,13 +36,21 @@ const ContactInfoGroup = () => {
       </motion.p>
       <ul className="mt-6">
         <motion.li
-          className="mb-3 flex gap-4 xl:mb-5 xl:gap-7"
+          className={`
+            mb-3 flex gap-4
+
+            xl:mb-5 xl:gap-7
+          `}
           variants={variants}
           whileInView={"visible"}
           animate={"visible"}
           transition={{ delay: 0.3 }}
         >
-          <div className="icon flex-center text-2xl text-[var(--primary)] xl:text-4xl">
+          <div className={`
+            icon flex-center text-2xl text-[var(--primary)]
+
+            xl:text-4xl
+          `}>
             <FaLocationDot />
           </div>
           <div>
@@ -52,13 +59,21 @@ const ContactInfoGroup = () => {
           </div>
         </motion.li>
         <motion.li
-          className="mb-3 flex gap-4 xl:mb-5 xl:gap-7"
+          className={`
+            mb-3 flex gap-4
+
+            xl:mb-5 xl:gap-7
+          `}
           variants={variants}
           whileInView={"visible"}
           animate={"visible"}
           transition={{ delay: 0.35 }}
         >
-          <div className="icon flex-center text-2xl text-[var(--primary)] xl:text-4xl">
+          <div className={`
+            icon flex-center text-2xl text-[var(--primary)]
+
+            xl:text-4xl
+          `}>
             <IoMdMail />
           </div>
           <div>
@@ -67,13 +82,21 @@ const ContactInfoGroup = () => {
           </div>
         </motion.li>
         <motion.li
-          className="mb-3 flex gap-4 xl:mb-5 xl:gap-7"
+          className={`
+            mb-3 flex gap-4
+
+            xl:mb-5 xl:gap-7
+          `}
           variants={variants}
           whileInView={"visible"}
           animate={"visible"}
           transition={{ delay: 0.4 }}
         >
-          <div className="icon flex-center text-2xl text-[var(--primary)] xl:text-4xl">
+          <div className={`
+            icon flex-center text-2xl text-[var(--primary)]
+
+            xl:text-4xl
+          `}>
             <FaPhoneAlt />
           </div>
           <div>

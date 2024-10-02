@@ -1,6 +1,6 @@
-import React, { PropsWithChildren } from "react";
+import { type PropsWithChildren } from 'react'
 
-import PageHeader from "@/components/PageHeader";
+import PageHeader from '@/components/PageHeader'
 
 const layout = ({ children }: PropsWithChildren) => {
   return (
@@ -8,13 +8,13 @@ const layout = ({ children }: PropsWithChildren) => {
       <PageHeader
         subTitle="resume"
         mainTitle={{
-          normal: "about",
-          strong: "me",
+          normal: 'about',
+          strong: 'me',
         }}
       />
       {children}
     </div>
-  );
-};
+  )
+}
 
-export default layout;
+export default layout
