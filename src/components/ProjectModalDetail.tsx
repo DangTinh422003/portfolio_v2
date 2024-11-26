@@ -101,7 +101,7 @@ const ProjectModalDetail = ({
                 className="mainSwiper mb-1"
                 {...mainSwiperConfig}
               >
-                {project.images.map((img, i) => {
+                {project.images.map((img) => {
                   const id = uuid();
                   return (
                     <motion.div key={id}>
@@ -120,7 +120,7 @@ const ProjectModalDetail = ({
             </div>
             <div>
               <Swiper onSwiper={setThumbsSwiper} {...subSwiperConfig}>
-                {project.images.map((img, i) => {
+                {project.images.map((img) => {
                   const id = uuid();
 
                   return (

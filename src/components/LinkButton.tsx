@@ -17,18 +17,20 @@ const LinkButton = ({
   return (
     <button
       className={`
-      inline-block
+        inline-block
 
-      ${className}
-    `}
+        ${className}
+      `}
       {...rest}
     >
       <Link href={href}>
-        <div className="group transition-all duration-300 relative h-[50px] rounded-full">
+        <div className={`
+          group relative h-[50px] rounded-full transition-all duration-300
+        `}>
           <div
             className={`
-              flex-center  transition-all duration-300 absolute -left-px -top-px size-[52px] rounded-full
-              bg-[var(--primary)]
+              flex-center absolute -left-px -top-px size-[52px] rounded-full
+              bg-[var(--primary)] transition-all duration-300
 
               group-hover:left-[calc(100%-50px)]
             `}
@@ -37,8 +39,9 @@ const LinkButton = ({
           </div>
           <p
             className={`
-              flex-center  transition-all duration-300 h-full rounded-full pl-16 pr-6 text-lg font-semibold
+              flex-center h-full rounded-full pl-16 pr-6 text-lg font-semibold
               uppercase shadow-2xl outline outline-2 outline-[var(--primary)]
+              transition-all duration-300
 
               group-hover:bg-[var(--primary)] group-hover:pl-6 group-hover:pr-16
               group-hover:text-white

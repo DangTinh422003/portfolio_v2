@@ -1,75 +1,77 @@
-"use client";
-import { motion } from "framer-motion";
-import React, { type ReactNode } from "react";
-import { FaArrowDown } from "react-icons/fa";
-import { FaCopy } from "react-icons/fa6";
-import { v4 } from "uuid";
+'use client'
+import { motion } from 'framer-motion'
+import React, { type ReactNode } from 'react'
+import { FaArrowDown } from 'react-icons/fa'
+import { FaCopy } from 'react-icons/fa6'
+import { v4 } from 'uuid'
 
-import LinkButton from "./LinkButton";
-import { HoverEffect } from "./ui/card-hover-effect";
+import LinkButton from './LinkButton'
+import { HoverEffect } from './ui/card-hover-effect'
 
 export interface IInfo {
-  count: number;
-  label: ReactNode;
+  count: number
+  label: ReactNode
 }
 
 const INFOS: IInfo[] = [
   {
     count: 2,
-    label: "YEARS OF EXPERIENCE",
+    label: 'YEARS OF EXPERIENCE',
   },
   {
     count: 13,
-    label: "COMPLETED PROJECTS",
+    label: 'COMPLETED PROJECTS',
   },
   {
     count: 2,
-    label: "CERTIFICATES",
+    label: 'CERTIFICATES',
   },
   {
     count: 1,
-    label: "AWARD WON",
+    label: 'AWARD WON',
   },
-];
+]
 
 const PERSONAL_INFOS = [
   {
-    title: "First name",
-    value: "Tinh",
+    title: 'First name',
+    value: 'Tinh',
   },
   {
-    title: "Last name",
-    value: "Cao Dang",
+    title: 'Last name',
+    value: 'Cao Dang',
   },
   {
-    title: "National",
-    value: "Vietnam",
+    title: 'National',
+    value: 'Vietnam',
   },
   {
-    title: "Address",
-    value: "District 7, Ho Chi Minh City",
+    title: 'Address',
+    value: 'District 7, Ho Chi Minh City',
   },
   {
-    title: "Phone",
-    value: "0862040542",
+    title: 'Phone',
+    value: '0862040542',
   },
   {
-    title: "Major",
-    value: "Computer Science",
+    title: 'Major',
+    value: 'Computer Science',
   },
   {
-    title: "Jobs",
-    value: "Fullstack Web Developer",
+    title: 'Jobs',
+    value: 'Fullstack Web Developer',
   },
-];
+]
 
 const AboutInfoSection = () => {
   return (
-    <div className={`
-      grid grid-cols-1
+    <div
+      className={`
+        grid grid-cols-1
 
-      xl:grid-cols-2
-    `}>
+        xl:grid-cols-2
+      `}
+    >
       {/* LEFT COL */}
 
       <div>
@@ -88,13 +90,15 @@ const AboutInfoSection = () => {
         >
           PERSONAL INFOS
         </motion.h3>
-        <ul className={`
-          grid
+        <ul
+          className={`
+            grid
 
-          md:grid-cols-2
-        `}>
+            md:grid-cols-2
+          `}
+        >
           <li key={v4()} className="mt-6 flex items-center gap-2">
-            <span className="opacity-70">Email:</span>{" "}
+            <span className="opacity-70">Email:</span>{' '}
             <div className="flex gap-2">
               <a
                 href="mailto: caodangtinh04022003@gmail.com"
@@ -108,10 +112,10 @@ const AboutInfoSection = () => {
 
                   hover:opacity-80
                 `}
-                onClick={() => {
-                  navigator.clipboard.writeText(
-                    "caodangtinh04022003@gmail.com",
-                  );
+                onClick={async () => {
+                  await navigator.clipboard.writeText(
+                    'caodangtinh04022003@gmail.com',
+                  )
                 }}
               />
             </div>
@@ -136,10 +140,10 @@ const AboutInfoSection = () => {
                 key={v4()}
                 className="mt-6"
               >
-                <span className="opacity-70">{info.title}:</span>{" "}
+                <span className="opacity-70">{info.title}:</span>{' '}
                 <span>{info.value}</span>
               </motion.li>
-            );
+            )
           })}
         </ul>
         <motion.div
@@ -178,36 +182,40 @@ const AboutInfoSection = () => {
           items={INFOS.map((info) => {
             return {
               description: <Box key={v4()} {...info} />,
-            };
+            }
           })}
         />
       </div>
     </div>
-  );
-};
+  )
+}
 
 const Box = ({ count, label }: IInfo) => {
   return (
-    <div className={`
-      transition-fade size-full min-h-52 cursor-pointer rounded-xl border
-      border-solid border-[#424242]/40 p-9 shadow-xl
+    <div
+      className={`
+        transition-fade size-full min-h-52 cursor-pointer rounded-xl border
+        border-solid border-[#424242]/40 p-9 shadow-xl
 
-      hover:scale-[1.03]
-    `}>
+        hover:scale-[1.03]
+      `}
+    >
       <p className="text-6xl font-bold text-[var(--primary)]">
         <span>{count}</span>
         <span className="relative -top-5 ml-1 text-5xl">+</span>
       </p>
-      <div className={`
-        relative ml-12 mt-5 text-wrap text-xl font-normal uppercase
+      <div
+        className={`
+          relative ml-12 mt-5 text-wrap text-xl font-normal uppercase
 
-        before:absolute-center before:-left-10 before:h-1 before:w-8
-        before:rounded-full before:bg-[#424242] before:content-['']
-      `}>
+          before:absolute-center before:-left-10 before:h-1 before:w-8
+          before:rounded-full before:bg-[#424242] before:content-['']
+        `}
+      >
         {label}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default AboutInfoSection;
+export default AboutInfoSection

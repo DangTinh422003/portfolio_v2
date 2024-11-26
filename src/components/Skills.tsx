@@ -1,6 +1,5 @@
 "use client";
 import { motion } from "framer-motion";
-import React from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import { v4 as uuid } from "uuid";
 

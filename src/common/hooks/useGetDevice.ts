@@ -5,9 +5,11 @@ import { DeviceMinSize } from "../constants/constants";
 type TDevice = "mobile" | "tablet" | "desktop";
 export const useGetDevice = () => {
   const getDevice = (size: number): TDevice => {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-enum-comparison
     if (size >= DeviceMinSize.DESKTOP) {
       return "desktop";
     }
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-enum-comparison
     if (size > DeviceMinSize.TABLET && size < DeviceMinSize.DESKTOP) {
       return "tablet";
     }
