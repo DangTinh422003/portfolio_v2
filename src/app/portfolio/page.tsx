@@ -1,40 +1,39 @@
-"use client";
-import { motion } from "framer-motion";
-import React from "react";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import { v4 as uuid } from "uuid";
+'use client'
+import { motion } from 'framer-motion'
+import React from 'react'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
-import { type Project } from "@/common/@types";
-import { PROJECTS } from "@/common/constants/constants";
-import ContentWrapper from "@/components/ContentWrapper";
-import ProjectModalDetail from "@/components/ProjectModalDetail";
+import { type Project } from '@/common/@types'
+import { PROJECTS } from '@/common/constants/constants'
+import ContentWrapper from '@/components/ContentWrapper'
+import ProjectModalDetail from '@/components/ProjectModalDetail'
 
 const PortfolioPage = () => {
-  const [isShowModal, setIsShowModal] = React.useState(false);
-  const [projectActive, setProjectActive] = React.useState<Project>();
+  const [isShowModal, setIsShowModal] = React.useState(false)
+  const [projectActive, setProjectActive] = React.useState<Project>()
 
   const handleActiveProject = (project: Project) => {
-    setIsShowModal(true);
-    setProjectActive(project);
-  };
+    setIsShowModal(true)
+    setProjectActive(project)
+  }
 
   return (
     <ContentWrapper>
-      {isShowModal && projectActive ? (
+      {isShowModal && projectActive ?
         <ProjectModalDetail
           setIsShowModal={setIsShowModal}
           project={projectActive}
         />
-      ) : (
-        <></>
-      )}
-      <div className={`
-        grid gap-3 pb-24
+      : <></>}
+      <div
+        className={`
+          grid gap-3 pb-24
 
-        lg:grid-cols-2 lg:pb-10
+          lg:grid-cols-2 lg:pb-10
 
-        xl:grid-cols-3
-      `}>
+          xl:grid-cols-3
+        `}
+      >
         {PROJECTS.map((pr, i) => {
           return (
             <motion.div
@@ -72,24 +71,26 @@ const PortfolioPage = () => {
               <div
                 className={`
                   flex-center transition-fade invisible absolute left-0 top-0
-                  size-full bg-black bg-opacity-80 opacity-0
+                  size-full bg-black/80 opacity-0
 
                   group-hover:visible group-hover:opacity-100
                 `}
                 onClick={() => handleActiveProject(pr)}
               >
-                <p className={`
-                  text-center text-3xl font-bold uppercase text-white
-                `}>
+                <p
+                  className={`
+                    text-center text-3xl font-bold uppercase text-white
+                  `}
+                >
                   {pr.name}
                 </p>
               </div>
             </motion.div>
-          );
+          )
         })}
       </div>
     </ContentWrapper>
-  );
-};
+  )
+}
 
-export default PortfolioPage;
+export default PortfolioPage

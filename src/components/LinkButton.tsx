@@ -1,10 +1,10 @@
-import Link from "next/link";
-import React, { type FC, type HTMLAttributes } from "react";
+import Link from 'next/link'
+import React, { type FC, type HTMLAttributes } from 'react'
 
 interface LinkButtonProps extends HTMLAttributes<HTMLButtonElement> {
-  title: string;
-  href: string;
-  icon: FC<any>;
+  title: string
+  href: string
+  icon: FC<any>
 }
 
 const LinkButton = ({
@@ -15,35 +15,41 @@ const LinkButton = ({
   ...rest
 }: LinkButtonProps) => {
   return (
-    <button className={`
+    <button
+      className={`
       inline-block
 
       ${className}
-    `} {...rest}>
+    `}
+      {...rest}
+    >
       <Link href={href}>
-        <div className="transition-fade group relative h-[50px] rounded-full">
-          <div className={`
-            flex-center transition-fade absolute -left-px -top-px size-[52px]
-            rounded-full bg-[var(--primary)]
+        <div className="group transition-all duration-300 relative h-[50px] rounded-full">
+          <div
+            className={`
+              flex-center  transition-all duration-300 absolute -left-px -top-px size-[52px] rounded-full
+              bg-[var(--primary)]
 
-            group-hover:left-[calc(100%-50px)]
-          `}>
+              group-hover:left-[calc(100%-50px)]
+            `}
+          >
             <Icon className="text-xl text-white" />
           </div>
-          <p className={`
-            flex-center transition-fade h-full rounded-full pl-16 pr-6 text-lg
-            font-semibold uppercase shadow-2xl outline outline-2
-            outline-[var(--primary)]
+          <p
+            className={`
+              flex-center  transition-all duration-300 h-full rounded-full pl-16 pr-6 text-lg font-semibold
+              uppercase shadow-2xl outline outline-2 outline-[var(--primary)]
 
-            group-hover:bg-[var(--primary)] group-hover:pl-6 group-hover:pr-16
-            group-hover:text-white
-          `}>
+              group-hover:bg-[var(--primary)] group-hover:pl-6 group-hover:pr-16
+              group-hover:text-white
+            `}
+          >
             {title}
           </p>
         </div>
       </Link>
     </button>
-  );
-};
+  )
+}
 
-export default LinkButton;
+export default LinkButton

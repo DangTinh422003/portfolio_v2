@@ -1,25 +1,25 @@
-"use client";
-import "aos/dist/aos.css";
+'use client'
+import 'aos/dist/aos.css'
 
-import AOS from "aos";
-import React, { type PropsWithChildren, useEffect } from "react";
+import AOS from 'aos'
+import { type PropsWithChildren, useEffect } from 'react'
 
-import { useGetDevice } from "../hooks/useGetDevice";
+import { useGetDevice } from '../hooks/useGetDevice'
 
 const AosAnimationProvider = ({ children }: PropsWithChildren) => {
-  const { isDesktop } = useGetDevice();
+  const { isDesktop } = useGetDevice()
 
   useEffect(() => {
     if (isDesktop) {
       AOS.init({
-        easing: "ease-in-out",
-      });
+        easing: 'ease-in-out',
+      })
     } else {
-      AOS.refreshHard();
+      AOS.refreshHard()
     }
-  }, [isDesktop]);
+  }, [isDesktop])
 
-  return <>{children}</>;
-};
+  return <>{children}</>
+}
 
-export default AosAnimationProvider;
+export default AosAnimationProvider

@@ -29,7 +29,11 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.png" sizes="cover" />
       </head>
-      <body className={`${poppins.className} h-screen w-screen`}>
+      <body className={`
+        ${poppins.className}
+
+        h-screen w-screen
+      `}>
         <NextThemeProvider>
           <Sidebar />
           <ToggleTheme />
