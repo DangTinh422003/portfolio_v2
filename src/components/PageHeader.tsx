@@ -34,7 +34,7 @@ const PageHeader = ({ mainTitle, subTitle, ...rest }: PageHeaderProps) => {
           md:py-24 md:text-6xl
         `}>
           {mainTitle.normal}{" "}
-          <span className="text-[var(--primary)]">{mainTitle.strong}</span>
+          <span className="text-primary">{mainTitle.strong}</span>
         </motion.h1>
         <motion.p className={`
           absolute-center z-0 text-6xl opacity-10

@@ -17,7 +17,7 @@ const ToggleTheme = () => {
     <button
       className={`
         flex-center fixed right-[20px] top-[20px] z-50 size-10 cursor-pointer
-        rounded-full border-0 bg-[var(--primary)] text-xl text-white shadow-xl
+        rounded-full border-0 bg-primary text-xl text-white shadow-xl
         outline-none
 
         md:right-[30px] md:top-[30px] md:size-[50px]

@@ -63,7 +63,7 @@ const Skills = () => {
               `}
             >
               <div className={`
-                flex-center mx-auto size-32 rounded-full bg-[var(--input-bg)]
+                flex-center mx-auto size-32 rounded-full bg-input-bg
               `}>
                 <LazyLoadImage
                   alt=""

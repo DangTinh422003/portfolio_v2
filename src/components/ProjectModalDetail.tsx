@@ -72,14 +72,14 @@ const ProjectModalDetail = ({
           <h2 className={`
             mb-3 flex items-center justify-between border-b-4 border-solid
             border-[#3b3b3b] text-center text-4xl font-bold uppercase
-            leading-normal text-[var(--primary)]
+            leading-normal text-primary
 
             md:text-left
           `}>
             <span className="flex-1">{project.name}</span>
             <IoCloseCircleSharp
               className={`
-                flex-center hidden rounded-full text-4xl text-[var(--primary)]
+                flex-center hidden rounded-full text-4xl text-primary
 
                 lg:hidden
 
@@ -146,12 +146,12 @@ const ProjectModalDetail = ({
           <h2 className={`
             mb-3 flex items-center justify-between border-b-4 border-solid
             border-[#3b3b3b] text-4xl font-bold uppercase leading-normal
-            text-[var(--primary)]
+            text-primary
           `}>
             <span>details</span>
             <IoCloseCircleSharp
               className={`
-                flex-center rounded-full text-4xl text-[var(--primary)]
+                flex-center rounded-full text-4xl text-primary
 
                 md:hidden
               `}
@@ -190,7 +190,7 @@ const ProjectModalDetail = ({
                 <span className="opacity-80">Demo - </span>{" "}
                 <a
                   className={`
-                    cursor-pointer font-semibold text-[var(--primary)] underline
+                    cursor-pointer font-semibold text-primary underline
                   `}
                   href={project.demo}
                   target="_blank"
@@ -204,7 +204,7 @@ const ProjectModalDetail = ({
                 <span className="opacity-80">Source - </span>{" "}
                 <a
                   className={`
-                    cursor-pointer font-semibold text-[var(--primary)] underline
+                    cursor-pointer font-semibold text-primary underline
                   `}
                   href={project.source}
                   target="_blank"

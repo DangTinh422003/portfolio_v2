@@ -59,14 +59,14 @@ const Sidebar = () => {
 
                   ${
                     pathName === sidebar.href ?
-                      'bg-[var(--primary)]'
+                      'bg-primary'
                     : 'bg-gray'
                   }
 
                   flex-center transition-fade relative z-10 rounded-full text-xl
                   text-white shadow-xl
 
-                  group-hover:bg-[var(--primary)]
+                  group-hover:bg-primary
                 `}
               >
                 <sidebar.icon />
@@ -75,8 +75,8 @@ const Sidebar = () => {
                 className={`
                   flex-center transition-fade duration-[400ms] invisible
                   absolute right-0 top-0 z-0 hidden h-full rounded-full
-                  bg-[var(--primary)] pl-4 pr-8 font-semibold uppercase
-                  text-white opacity-0
+                  bg-primary pl-4 pr-8 font-semibold uppercase text-white
+                  opacity-0
 
                   group-hover:visible group-hover:pl-6 group-hover:pr-16
                   group-hover:opacity-100

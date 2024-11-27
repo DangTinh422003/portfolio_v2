@@ -21,7 +21,7 @@ export default function Home() {
       <div
         className={`
           absolute left-0 top-0 z-0 hidden h-[200vh] w-screen translate-x-[-78%]
-          rotate-[-16deg] bg-[var(--primary)]
+          rotate-[-16deg] bg-primary
 
           xl:block
         `}
@@ -57,7 +57,7 @@ export default function Home() {
             alt=""
             src="/file.png"
             effect="blur"
-            wrapperClassName="relative shadow-2xl rounded-full overflow-hidden border-[2px] border-solid border-[var(--primary)] w-[15rem] h-[15rem] md:w-[20rem] md:h-[20rem] xl:w-full xl:h-[35rem] xl:border-0  xl:rounded-3xl"
+            wrapperClassName="relative shadow-2xl rounded-full overflow-hidden border-[2px] border-solid border-primary w-[15rem] h-[15rem] md:w-[20rem] md:h-[20rem] xl:w-full xl:h-[35rem] xl:border-0  xl:rounded-3xl"
             className="size-full object-cover"
           />
         </motion.div>
@@ -104,11 +104,11 @@ export default function Home() {
                 repeat={Infinity}
                 wrapper="span"
                 className={`
-                  text-[var(--primary)]
+                  text-primary
 
                   before:absolute before:-left-16 before:top-7 before:hidden
-                  before:h-2 before:w-11 before:rounded-lg
-                  before:bg-[var(--primary)] before:content-[''] before:xl:block
+                  before:h-2 before:w-11 before:rounded-lg before:bg-primary
+                  before:content-[''] before:xl:block
                 `}
               />
               <br />
@@ -141,14 +141,15 @@ export default function Home() {
                 xl:pl-0 xl:pr-20 xl:text-base xl:leading-loose
               `}
             >
-              Hi, I&apos;m Tinh, but you guys can call me Dang. Currently,
-              i&apos;m a full-stack developer in Web 2.0 with over two years of
-              experience in frontend development using Next.js and it&apos;s
-              ecosystem, and backend development with Nest.js. Recently, I have
-              been exploring and developing an interest in new technologies for
-              blockchain programming and the Web3 ecosystem. I hope to connect
-              and work with others who share the same passion for web and
-              blockchain development.
+              Hi, my name is Tinh, but you can call me Dang. I am currently
+              working as a full-stack developer specializing in Web 2.0. With
+              over two years of experience, I have honed my skills in frontend
+              development using Next.js and its ecosystem, as well as backend
+              development with Nest.js. Recently, I have developed a strong
+              interest in emerging technologies related to blockchain
+              programming and the Web3 ecosystem. I am eager to connect with
+              like-minded professionals and collaborate on projects that drive
+              innovation in web and blockchain development.
             </motion.p>
             <div
               className={`

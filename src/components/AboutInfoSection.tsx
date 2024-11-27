@@ -72,8 +72,6 @@ const AboutInfoSection = () => {
         xl:grid-cols-2
       `}
     >
-      {/* LEFT COL */}
-
       <div>
         <motion.h3
           animate={{
@@ -102,7 +100,7 @@ const AboutInfoSection = () => {
             <div className="flex gap-2">
               <a
                 href="mailto: caodangtinh04022003@gmail.com"
-                className="text-[var(--primary)] underline"
+                className="text-primary underline"
               >
                 Click Here
               </a>
@@ -195,22 +193,17 @@ const Box = ({ count, label }: IInfo) => {
     <div
       className={`
         transition-fade size-full min-h-52 cursor-pointer rounded-xl border
-        border-solid border-[#424242]/40 p-9 shadow-xl
+        border-solid border-[#424242]/10 p-9 shadow-xl
 
         hover:scale-[1.03]
       `}
     >
-      <p className="text-6xl font-bold text-[var(--primary)]">
+      <p className="text-6xl font-bold text-primary">
         <span>{count}</span>
         <span className="relative -top-5 ml-1 text-5xl">+</span>
       </p>
       <div
-        className={`
-          relative ml-12 mt-5 text-wrap text-xl font-normal uppercase
-
-          before:absolute-center before:-left-10 before:h-1 before:w-8
-          before:rounded-full before:bg-[#424242] before:content-['']
-        `}
+        className={`relative ml-12 mt-5 text-wrap text-xl font-normal uppercase`}
       >
         {label}
       </div>

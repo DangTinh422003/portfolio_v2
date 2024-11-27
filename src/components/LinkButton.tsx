@@ -30,7 +30,7 @@ const LinkButton = ({
           <div
             className={`
               flex-center absolute -left-px -top-px size-[52px] rounded-full
-              bg-[var(--primary)] transition-all duration-300
+              bg-primary transition-all duration-300
 
               group-hover:left-[calc(100%-50px)]
             `}
@@ -40,10 +40,10 @@ const LinkButton = ({
           <p
             className={`
               flex-center h-full rounded-full pl-16 pr-6 text-lg font-semibold
-              uppercase shadow-2xl outline outline-2 outline-[var(--primary)]
+              uppercase shadow-2xl outline outline-2 outline-primary
               transition-all duration-300
 
-              group-hover:bg-[var(--primary)] group-hover:pl-6 group-hover:pr-16
+              group-hover:bg-primary group-hover:pl-6 group-hover:pr-16
               group-hover:text-white
             `}
           >

@@ -51,15 +51,15 @@ const Experiens = () => {
                 before:bg-[#424242]
               `}>
                 <div className={`
-                  flex-center relative z-10 size-10 rounded-full
-                  bg-[var(--primary)] text-xl text-white
+                  flex-center relative z-10 size-10 rounded-full bg-primary
+                  text-xl text-white
                 `}>
                   <exp.icon />
                 </div>
               </div>
               <div>
                 <p className={`
-                  inline-block rounded-3xl bg-[var(--input-bg)] px-2 text-sm
+                  inline-block rounded-3xl bg-input-bg px-2 text-sm
                   font-semibold opacity-80
                 `}>
                   {exp.timeLine}

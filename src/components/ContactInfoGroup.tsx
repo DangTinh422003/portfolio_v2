@@ -47,7 +47,7 @@ const ContactInfoGroup = () => {
           transition={{ delay: 0.3 }}
         >
           <div className={`
-            icon flex-center text-2xl text-[var(--primary)]
+            icon flex-center text-2xl text-primary
 
             xl:text-4xl
           `}>
@@ -70,7 +70,7 @@ const ContactInfoGroup = () => {
           transition={{ delay: 0.35 }}
         >
           <div className={`
-            icon flex-center text-2xl text-[var(--primary)]
+            icon flex-center text-2xl text-primary
 
             xl:text-4xl
           `}>
@@ -93,7 +93,7 @@ const ContactInfoGroup = () => {
           transition={{ delay: 0.4 }}
         >
           <div className={`
-            icon flex-center text-2xl text-[var(--primary)]
+            icon flex-center text-2xl text-primary
 
             xl:text-4xl
           `}>
